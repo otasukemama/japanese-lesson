@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ユニット18：電話でのやりとり（講師用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#21201c; --paper:#efe7d8; --paper-light:#f7f2e6;
+    --indigo:#1f3a5f; --sakura:#c97a97; --sakura-soft:#f1dbe4; --gold:#b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family:'Zen Kaku Gothic New',-apple-system,sans-serif,'Hiragino Sans';
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  html,body{height:100%;} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}}
+  :root[data-theme="dark"]{--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}
+  h1,h2{font-family:'Shippori Mincho',serif;margin:0;}
+  header.hero{background:var(--indigo);color:var(--paper-light);padding:2.6rem 1.5rem;position:relative;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%);opacity:.35;}
+  .hero-inner{max-width:780px;margin:0 auto;position:relative;}
+  .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
+  .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
+  .hero h1{font-size:clamp(1.6rem,4.2vw,2.2rem);line-height:1.35;font-weight:700;}
+  .hero p.sub{margin-top:.8rem;font-size:.92rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
+  main{max-width:780px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
+  section{margin-bottom:2.2rem;}
+  section h2{font-size:1.1rem;color:var(--indigo);margin-bottom:.5rem;}
+  @media (prefers-color-scheme: dark){section h2{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] section h2{color:var(--sakura-soft);}
+  .lede{font-size:.86rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.8rem;}
+  .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;}
+  .word-card{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;text-align:center;}
+  .word-card .emoji{font-size:1.9rem;line-height:1;}
+  .word-card .jp{font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-top:.35rem;}
+  .word-card .romaji{font-size:.74rem;color:var(--gold);margin-top:.15rem;}
+  .word-card .en{font-size:.78rem;margin-top:.25rem;opacity:.8;}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.85rem;}
+  th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top;}
+  thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.8rem;}
+  tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
+  .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem;}
+  .drill .line{font-size:.95rem;line-height:1.9;}
+  .drill .line b{color:var(--indigo);}
+  @media (prefers-color-scheme: dark){.drill .line b{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .drill .line b{color:var(--sakura-soft);}
+  .drill .who{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.04em;margin-bottom:.2rem;}
+  .drill .row{padding:.3rem 0;border-bottom:1px dashed var(--line);}
+  .drill .row:last-child{border-bottom:none;}
+  .drill .rj{font-size:.78rem;color:var(--gold);}
+  .drill .en{font-size:.78rem;opacity:.75;}
+  .blank{display:inline-block;border-bottom:2px dotted var(--gold);min-width:5em;text-align:center;}
+  .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
+  .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
+  @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
+  footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--indigo);color:#fff;">TEACHER</span></div>
+    <h1>ユニット18：電話でのやりとり（講師用）</h1>
+    <p class="sub">今日のゴール：電話で予約や問い合わせができるようになる。書く練習はまだしません。</p>
+  </div>
+</header>
+<main>
+
+  <section><h2>今日の単語（6つ）</h2><div class="word-grid"><div class="word-card"><span class="emoji">📞</span><div class="jp">でんわ</div><div class="romaji">denwa</div><div class="en">phone</div></div><div class="word-card"><span class="emoji">👋</span><div class="jp">もしもし</div><div class="romaji">moshi moshi</div><div class="en">hello (on the phone)</div></div><div class="word-card"><span class="emoji">📅</span><div class="jp">よやく</div><div class="romaji">yoyaku</div><div class="en">reservation</div></div><div class="word-card"><span class="emoji">🕒</span><div class="jp">なんじ</div><div class="romaji">nanji</div><div class="en">what time</div></div><div class="word-card"><span class="emoji">🙋</span><div class="jp">おなまえ</div><div class="romaji">onamae</div><div class="en">your name</div></div><div class="word-card"><span class="emoji">🙆</span><div class="jp">だいじょうぶです</div><div class="romaji">daijoubu desu</div><div class="en">that's fine / okay</div></div></div></section>
+  <section><h2>読む練習（3〜5分）</h2><p class="lede">上の単語を音読。</p></section>
+  <section>
+    <h2>会話ドリル（くり返し練習・10〜15分）</h2>
+    <p class="lede">パターンを入れ替えながらくり返し練習します。</p>
+    <div class="drill"><div class="line"><b>A</b>：もしもし、よやくを したいんですが。<br><span class="rj">Moshi moshi, yoyaku wo shitain desu ga.</span> <span class="en">Hello, I'd like to make a reservation.</span></div><div class="line"><b>B</b>：はい、なんじが よろしいですか？<br><span class="rj">Hai, nanji ga yoroshii desu ka?</span> <span class="en">Sure, what time works for you?</span></div></div><div class="drill"><div class="line"><b>A</b>：<span class="blank">＿＿</span>じで おねがいします。<br><span class="rj">___ ji de onegaishimasu.</span> <span class="en">___ o'clock, please.</span></div><div class="line"><b>B</b>：かしこまりました。おなまえを おねがいします。<br><span class="rj">Kashikomarimashita. Onamae wo onegaishimasu.</span> <span class="en">Certainly. May I have your name?</span></div></div>
+    <div class="table-wrap"><table><thead><tr><th>ラウンド</th><th>入れ替えるもの</th><th>ねらい</th></tr></thead><tbody><tr><th>1</th><td>時間（なんじ）を入れ替える</td><td>数え方(Counters)の時間表現と組み合わせる</td></tr><tr><th>2</th><td>自分の名前を答える練習を加える</td><td>実際の予約電話を想定する</td></tr><tr><th>3</th><td>「すみません、もういちど おねがいします」(please say that again)を紹介する</td><td>聞き取れなかった時の対処法を身につける</td></tr></tbody></table></div>
+  </section>
+  <section><h2>まとめ（3分）</h2><p class="lede">「よやくをしたいんですが」と言えて、時間と名前が伝えられればOK。フェーズCはこれで完了です。</p></section>
+  <div class="note"><strong>講師メモ</strong><p style="margin:.4rem 0 0;">電話は相手の顔が見えないため、聞き取れなかった時の「もういちどおねがいします」も一緒に練習しておくと安心です。実際にロールプレイで電話をかけるふりをしてみると効果的です。</p></div>
+
+</main>
+<footer>Sakura Bloom Japanese Lessons — ユニット18・講師用（下書き）</footer>
+</body>
+</html>
