@@ -52,9 +52,10 @@
   .chapter-text p { margin: 0; font-size: 0.88rem; color: color-mix(in srgb, var(--ink) 65%, transparent); line-height: 1.6; }
   .arrow { margin-left: auto; flex: none; font-size: 1.2rem; color: var(--sakura); }
   .unit-row { display: flex; align-items: center; gap: 1.1rem; background: var(--paper-light); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; margin-bottom: 0.9rem; }
-  .unit-row .sub-links a { color: var(--indigo); text-decoration: underline; margin-right: 1rem; font-size: 0.9rem; }
-  @media (prefers-color-scheme: dark) { .unit-row .sub-links a { color: var(--sakura-soft); } }
-  :root[data-theme="dark"] .unit-row .sub-links a { color: var(--sakura-soft); }
+  .unit-row .sub-links { display: flex; gap: .6rem; margin-top: .3rem; flex-wrap: wrap; }
+  .badge-link { display: inline-flex; align-items: center; gap: .4rem; text-decoration: none; font-size: .82rem; font-weight: 700; padding: .3rem .7rem; border-radius: 999px; }
+  .badge-link.teacher { background: var(--indigo); color: #fff; }
+  .badge-link.student { background: var(--sakura); color: #16283f; }
 
   .status-note {
     font-size: 0.82rem;
@@ -113,15 +114,6 @@
     <div class="arrow">→</div>
   </a>
 
-  <a class="chapter-link" href="conversation-lessons.html">
-    <div class="seal">5</div>
-    <div class="chapter-text">
-      <h2>Conversation Lessons</h2>
-      <p>10 roleplay conversation lessons to use each session, starting with self-introduction.</p>
-    </div>
-    <div class="arrow">→</div>
-  </a>
-
   <a class="chapter-link" href="teacher-guide.html">
     <div class="seal">G</div>
     <div class="chapter-text">
@@ -146,86 +138,97 @@
     <div class="seal">0</div>
     <div class="chapter-text">
       <h2>ユニット0：おとをよむ</h2>
-      <div class="sub-links"><a href="unit0-teacher.html">講師用</a><a href="unit0-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit0-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit0-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">1</div>
     <div class="chapter-text">
       <h2>ユニット1：あいさつ</h2>
-      <div class="sub-links"><a href="unit1-teacher.html">講師用</a><a href="unit1-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit1-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit1-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">2</div>
     <div class="chapter-text">
       <h2>ユニット2：自己紹介</h2>
-      <div class="sub-links"><a href="unit2-teacher.html">講師用</a><a href="unit2-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit2-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit2-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">3</div>
     <div class="chapter-text">
       <h2>ユニット3：なに</h2>
-      <div class="sub-links"><a href="unit3-teacher.html">講師用</a><a href="unit3-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit3-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit3-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">4</div>
     <div class="chapter-text">
       <h2>ユニット4：どこ</h2>
-      <div class="sub-links"><a href="unit4-teacher.html">講師用</a><a href="unit4-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit4-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit4-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">5</div>
     <div class="chapter-text">
       <h2>ユニット5：だれ</h2>
-      <div class="sub-links"><a href="unit5-teacher.html">講師用</a><a href="unit5-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit5-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit5-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">6</div>
     <div class="chapter-text">
       <h2>ユニット6：数字・年齢</h2>
-      <div class="sub-links"><a href="unit6-teacher.html">講師用</a><a href="unit6-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit6-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit6-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">7</div>
     <div class="chapter-text">
       <h2>ユニット7：好きな食べ物</h2>
-      <div class="sub-links"><a href="unit7-teacher.html">講師用</a><a href="unit7-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit7-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit7-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">8</div>
     <div class="chapter-text">
       <h2>ユニット8：趣味</h2>
-      <div class="sub-links"><a href="unit8-teacher.html">講師用</a><a href="unit8-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit8-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit8-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">9</div>
     <div class="chapter-text">
       <h2>ユニット9：家族</h2>
-      <div class="sub-links"><a href="unit9-teacher.html">講師用</a><a href="unit9-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit9-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit9-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">10</div>
     <div class="chapter-text">
       <h2>ユニット10：時間・一日の流れ</h2>
-      <div class="sub-links"><a href="unit10-teacher.html">講師用</a><a href="unit10-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit10-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit10-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
   <div class="unit-row">
     <div class="seal">11</div>
     <div class="chapter-text">
       <h2>ユニット11：週末の予定</h2>
-      <div class="sub-links"><a href="unit11-teacher.html">講師用</a><a href="unit11-student.html">生徒用</a></div>
+      <div class="sub-links"><a class="badge-link teacher" href="unit11-teacher.html">👩‍🏫 TEACHER</a><a class="badge-link student" href="unit11-student.html">🎓 STUDENT</a></div>
     </div>
   </div>
+
+  <p class="status-note">ユニット0〜11を一通り終えたら</p>
+
+  <a class="chapter-link" href="conversation-lessons.html">
+    <div class="seal">+</div>
+    <div class="chapter-text">
+      <h2>会話レッスン（応用・発展編）</h2>
+      <p>10 roleplay conversation lessons for after finishing the units — more advanced than Unit 0–11.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
 
   <p class="status-note">フェーズC（ユニット12〜18：天気・道案内・カフェ・買い物・病院薬局・郵便宅配・電話）は準備中です。</p>
 </main>
