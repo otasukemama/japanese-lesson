@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 0: Sound Reading Warm-up（生徒用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#21201c; --paper:#efe7d8; --paper-light:#f7f2e6;
+    --indigo:#1f3a5f; --sakura:#c97a97; --sakura-soft:#f1dbe4; --gold:#b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family:'Zen Kaku Gothic New',-apple-system,sans-serif,'Hiragino Sans';
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  html,body{height:100%;} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}}
+  :root[data-theme="dark"]{--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}
+  h1,h2{font-family:'Shippori Mincho',serif;margin:0;}
+  header.hero{background:var(--indigo);color:var(--paper-light);padding:2.6rem 1.5rem;position:relative;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%);opacity:.35;}
+  .hero-inner{max-width:780px;margin:0 auto;position:relative;}
+  .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
+  .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
+  .hero h1{font-size:clamp(1.6rem,4.2vw,2.2rem);line-height:1.35;font-weight:700;}
+  .hero p.sub{margin-top:.8rem;font-size:.92rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
+  main{max-width:780px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
+  section{margin-bottom:2.2rem;}
+  section h2{font-size:1.1rem;color:var(--indigo);margin-bottom:.5rem;}
+  @media (prefers-color-scheme: dark){section h2{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] section h2{color:var(--sakura-soft);}
+  .lede{font-size:.86rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.8rem;}
+  .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;}
+  .word-card{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;text-align:center;}
+  .word-card .emoji{font-size:1.9rem;line-height:1;}
+  .word-card .jp{font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-top:.35rem;}
+  .word-card .romaji{font-size:.74rem;color:var(--gold);margin-top:.15rem;}
+  .word-card .en{font-size:.78rem;margin-top:.25rem;opacity:.8;}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.85rem;}
+  th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top;}
+  thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.8rem;}
+  tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
+  .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem;}
+  .drill .line{font-size:.95rem;line-height:1.9;}
+  .drill .line b{color:var(--indigo);}
+  @media (prefers-color-scheme: dark){.drill .line b{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .drill .line b{color:var(--sakura-soft);}
+  .drill .who{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.04em;margin-bottom:.2rem;}
+  .drill .row{padding:.3rem 0;border-bottom:1px dashed var(--line);}
+  .drill .row:last-child{border-bottom:none;}
+  .drill .rj{font-size:.78rem;color:var(--gold);}
+  .drill .en{font-size:.78rem;opacity:.75;}
+  .blank{display:inline-block;border-bottom:2px dotted var(--gold);min-width:5em;text-align:center;}
+  .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
+  .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
+  @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
+  footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
+.pointto{font-size:.72rem;margin-top:.35rem;color:var(--sakura);font-weight:700;} .kana{font-size:1.1rem;display:block;} .romaji-sm{font-size:.65rem;opacity:.7;} table td,table th{text-align:center;}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag">下書き</span></div>
+    <h1>Unit 0: Sound Reading Warm-up<br>ユニット0：おとをよむ</h1>
+    <p class="sub">A short warm-up before Unit 1 — read through the basic sounds, then practice a few simple words.</p>
+  </div>
+</header>
+<main>
+
+  <section>
+    <h2>Step 1: Read the Sound Chart</h2>
+    <p class="lede">Read through all 46 basic sounds together, from あ to ん, out loud.</p>
+    <div class="table-wrap"><table><thead><tr><th></th><th>a</th><th>k</th><th>s</th><th>t</th><th>n</th><th>h</th><th>m</th><th>y</th><th>r</th><th>w</th></tr></thead><tbody><tr><th>a</th><td><span class="kana">あ</span><span class="romaji-sm">a</span></td><td><span class="kana">か</span><span class="romaji-sm">ka</span></td><td><span class="kana">さ</span><span class="romaji-sm">sa</span></td><td><span class="kana">た</span><span class="romaji-sm">ta</span></td><td><span class="kana">な</span><span class="romaji-sm">na</span></td><td><span class="kana">は</span><span class="romaji-sm">ha</span></td><td><span class="kana">ま</span><span class="romaji-sm">ma</span></td><td><span class="kana">や</span><span class="romaji-sm">ya</span></td><td><span class="kana">ら</span><span class="romaji-sm">ra</span></td><td><span class="kana">わ</span><span class="romaji-sm">wa</span></td></tr><tr><th>i</th><td><span class="kana">い</span><span class="romaji-sm">i</span></td><td><span class="kana">き</span><span class="romaji-sm">ki</span></td><td><span class="kana">し</span><span class="romaji-sm">shi</span></td><td><span class="kana">ち</span><span class="romaji-sm">chi</span></td><td><span class="kana">に</span><span class="romaji-sm">ni</span></td><td><span class="kana">ひ</span><span class="romaji-sm">hi</span></td><td><span class="kana">み</span><span class="romaji-sm">mi</span></td><td></td><td><span class="kana">り</span><span class="romaji-sm">ri</span></td><td></td></tr><tr><th>u</th><td><span class="kana">う</span><span class="romaji-sm">u</span></td><td><span class="kana">く</span><span class="romaji-sm">ku</span></td><td><span class="kana">す</span><span class="romaji-sm">su</span></td><td><span class="kana">つ</span><span class="romaji-sm">tsu</span></td><td><span class="kana">ぬ</span><span class="romaji-sm">nu</span></td><td><span class="kana">ふ</span><span class="romaji-sm">fu</span></td><td><span class="kana">む</span><span class="romaji-sm">mu</span></td><td><span class="kana">ゆ</span><span class="romaji-sm">yu</span></td><td><span class="kana">る</span><span class="romaji-sm">ru</span></td><td></td></tr><tr><th>e</th><td><span class="kana">え</span><span class="romaji-sm">e</span></td><td><span class="kana">け</span><span class="romaji-sm">ke</span></td><td><span class="kana">せ</span><span class="romaji-sm">se</span></td><td><span class="kana">て</span><span class="romaji-sm">te</span></td><td><span class="kana">ね</span><span class="romaji-sm">ne</span></td><td><span class="kana">へ</span><span class="romaji-sm">he</span></td><td><span class="kana">め</span><span class="romaji-sm">me</span></td><td></td><td><span class="kana">れ</span><span class="romaji-sm">re</span></td><td></td></tr><tr><th>o</th><td><span class="kana">お</span><span class="romaji-sm">o</span></td><td><span class="kana">こ</span><span class="romaji-sm">ko</span></td><td><span class="kana">そ</span><span class="romaji-sm">so</span></td><td><span class="kana">と</span><span class="romaji-sm">to</span></td><td><span class="kana">の</span><span class="romaji-sm">no</span></td><td><span class="kana">ほ</span><span class="romaji-sm">ho</span></td><td><span class="kana">も</span><span class="romaji-sm">mo</span></td><td><span class="kana">よ</span><span class="romaji-sm">yo</span></td><td><span class="kana">ろ</span><span class="romaji-sm">ro</span></td><td><span class="kana">を</span><span class="romaji-sm">wo</span></td></tr><tr><th>n</th><td colspan="9" style="text-align:center;"><span class="kana">ん</span><span class="romaji-sm">n</span> — the last sound, stands alone</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Voiced Sounds (だくおん・はんだくおん)</h2>
+    <p class="lede">Adding ゛ or ゜ to か・さ・た・は row sounds changes them like this. Just read through once or twice — no need to memorize yet.</p>
+    <div class="table-wrap"><table><thead><tr><th></th><th>g</th><th>z</th><th>d</th><th>b</th><th>p</th></tr></thead><tbody>
+      <tr><th>a</th><td><span class="kana">が</span><span class="romaji-sm">ga</span></td><td><span class="kana">ざ</span><span class="romaji-sm">za</span></td><td><span class="kana">だ</span><span class="romaji-sm">da</span></td><td><span class="kana">ば</span><span class="romaji-sm">ba</span></td><td><span class="kana">ぱ</span><span class="romaji-sm">pa</span></td></tr>
+      <tr><th>i</th><td><span class="kana">ぎ</span><span class="romaji-sm">gi</span></td><td><span class="kana">じ</span><span class="romaji-sm">ji</span></td><td><span class="kana">ぢ</span><span class="romaji-sm">ji</span></td><td><span class="kana">び</span><span class="romaji-sm">bi</span></td><td><span class="kana">ぴ</span><span class="romaji-sm">pi</span></td></tr>
+      <tr><th>u</th><td><span class="kana">ぐ</span><span class="romaji-sm">gu</span></td><td><span class="kana">ず</span><span class="romaji-sm">zu</span></td><td><span class="kana">づ</span><span class="romaji-sm">zu</span></td><td><span class="kana">ぶ</span><span class="romaji-sm">bu</span></td><td><span class="kana">ぷ</span><span class="romaji-sm">pu</span></td></tr>
+      <tr><th>e</th><td><span class="kana">げ</span><span class="romaji-sm">ge</span></td><td><span class="kana">ぜ</span><span class="romaji-sm">ze</span></td><td><span class="kana">で</span><span class="romaji-sm">de</span></td><td><span class="kana">べ</span><span class="romaji-sm">be</span></td><td><span class="kana">ぺ</span><span class="romaji-sm">pe</span></td></tr>
+      <tr><th>o</th><td><span class="kana">ご</span><span class="romaji-sm">go</span></td><td><span class="kana">ぞ</span><span class="romaji-sm">zo</span></td><td><span class="kana">ど</span><span class="romaji-sm">do</span></td><td><span class="kana">ぼ</span><span class="romaji-sm">bo</span></td><td><span class="kana">ぽ</span><span class="romaji-sm">po</span></td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Combined Sounds (ようおん)</h2>
+    <p class="lede">A small ゃ・ゅ・ょ after an "i" sound blends into one syllable, like き + small ゃ = きゃ.</p>
+    <div class="table-wrap"><table><thead><tr><th>kya-row</th><th>sha-row</th><th>cha-row</th><th>nya-row</th><th>hya-row</th><th>mya-row</th><th>rya-row</th><th>gya-row</th><th>ja-row</th><th>bya-row</th><th>pya-row</th></tr></thead><tbody>
+      <tr><td><span class="kana">きゃ</span></td><td><span class="kana">しゃ</span></td><td><span class="kana">ちゃ</span></td><td><span class="kana">にゃ</span></td><td><span class="kana">ひゃ</span></td><td><span class="kana">みゃ</span></td><td><span class="kana">りゃ</span></td><td><span class="kana">ぎゃ</span></td><td><span class="kana">じゃ</span></td><td><span class="kana">びゃ</span></td><td><span class="kana">ぴゃ</span></td></tr>
+      <tr><td><span class="kana">きゅ</span></td><td><span class="kana">しゅ</span></td><td><span class="kana">ちゅ</span></td><td><span class="kana">にゅ</span></td><td><span class="kana">ひゅ</span></td><td><span class="kana">みゅ</span></td><td><span class="kana">りゅ</span></td><td><span class="kana">ぎゅ</span></td><td><span class="kana">じゅ</span></td><td><span class="kana">びゅ</span></td><td><span class="kana">ぴゅ</span></td></tr>
+      <tr><td><span class="kana">きょ</span></td><td><span class="kana">しょ</span></td><td><span class="kana">ちょ</span></td><td><span class="kana">にょ</span></td><td><span class="kana">ひょ</span></td><td><span class="kana">みょ</span></td><td><span class="kana">りょ</span></td><td><span class="kana">ぎょ</span></td><td><span class="kana">じょ</span></td><td><span class="kana">びょ</span></td><td><span class="kana">ぴょ</span></td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Special Sounds: っ, long vowels, and ん</h2>
+    <div class="table-wrap"><table><thead><tr><th>Sound</th><th>Example</th><th>What it does</th></tr></thead><tbody>
+      <tr><td><span class="kana">っ</span><span class="romaji-sm">(sokuon)</span></td><td><span class="kana">がっこう</span><span class="romaji-sm">gakkou</span></td><td>Small っ = a tiny pause before the next sound (school)</td></tr>
+      <tr><td>Long vowel</td><td><span class="kana">おかあさん</span><span class="romaji-sm">okaasan</span></td><td>Doubled vowel = hold the sound one extra beat (mother)</td></tr>
+      <tr><td><span class="kana">ん</span><span class="romaji-sm">n</span></td><td><span class="kana">さん</span><span class="romaji-sm">san</span></td><td>Stands alone as its own beat (Mr./Ms. ~)</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Step 2: Read Simple Words</h2>
+    <p class="lede">Now put the sounds together into real words. Point to each letter on the chart above as you read.</p>
+    <div class="word-grid"><div class="word-card"><span class="emoji">🔵</span><div class="jp">あお</div><div class="romaji">ao</div><div class="en">blue</div><div class="pointto">Point: あ → お</div></div><div class="word-card"><span class="emoji">🔴</span><div class="jp">あか</div><div class="romaji">aka</div><div class="en">red</div><div class="pointto">Point: あ → か</div></div><div class="word-card"><span class="emoji">🪑</span><div class="jp">いす</div><div class="romaji">isu</div><div class="en">chair</div><div class="pointto">Point: い → す</div></div><div class="word-card"><span class="emoji">🐱</span><div class="jp">ねこ</div><div class="romaji">neko</div><div class="en">cat</div><div class="pointto">Point: ね → こ</div></div><div class="word-card"><span class="emoji">🐶</span><div class="jp">いぬ</div><div class="romaji">inu</div><div class="en">dog</div><div class="pointto">Point: い → ぬ</div></div><div class="word-card"><span class="emoji">🎵</span><div class="jp">うた</div><div class="romaji">uta</div><div class="en">song</div><div class="pointto">Point: う → た</div></div><div class="word-card"><span class="emoji">🌸</span><div class="jp">はな</div><div class="romaji">hana</div><div class="en">flower</div><div class="pointto">Point: は → な</div></div><div class="word-card"><span class="emoji">🖼️</span><div class="jp">え</div><div class="romaji">e</div><div class="en">picture</div><div class="pointto">Point: え</div></div><div class="word-card"><span class="emoji">👁️</span><div class="jp">め</div><div class="romaji">me</div><div class="en">eye</div><div class="pointto">Point: め</div></div></div>
+  </section>
+
+</main>
+<footer>Sakura Bloom Japanese Lessons — Unit 0 / Student Edition（下書き）</footer>
+</body>
+</html>

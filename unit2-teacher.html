@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ユニット2：自己紹介（講師用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#21201c; --paper:#efe7d8; --paper-light:#f7f2e6;
+    --indigo:#1f3a5f; --sakura:#c97a97; --sakura-soft:#f1dbe4; --gold:#b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family:'Zen Kaku Gothic New',-apple-system,sans-serif,'Hiragino Sans';
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  html,body{height:100%;} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}}
+  :root[data-theme="dark"]{--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}
+  h1,h2{font-family:'Shippori Mincho',serif;margin:0;}
+  header.hero{background:var(--indigo);color:var(--paper-light);padding:2.6rem 1.5rem;position:relative;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%);opacity:.35;}
+  .hero-inner{max-width:780px;margin:0 auto;position:relative;}
+  .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
+  .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
+  .hero h1{font-size:clamp(1.6rem,4.2vw,2.2rem);line-height:1.35;font-weight:700;}
+  .hero p.sub{margin-top:.8rem;font-size:.92rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
+  main{max-width:780px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
+  section{margin-bottom:2.2rem;}
+  section h2{font-size:1.1rem;color:var(--indigo);margin-bottom:.5rem;}
+  @media (prefers-color-scheme: dark){section h2{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] section h2{color:var(--sakura-soft);}
+  .lede{font-size:.86rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.8rem;}
+  .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;}
+  .word-card{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;text-align:center;}
+  .word-card .emoji{font-size:1.9rem;line-height:1;}
+  .word-card .jp{font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-top:.35rem;}
+  .word-card .romaji{font-size:.74rem;color:var(--gold);margin-top:.15rem;}
+  .word-card .en{font-size:.78rem;margin-top:.25rem;opacity:.8;}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.85rem;}
+  th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top;}
+  thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.8rem;}
+  tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
+  .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem;}
+  .drill .line{font-size:.95rem;line-height:1.9;}
+  .drill .line b{color:var(--indigo);}
+  @media (prefers-color-scheme: dark){.drill .line b{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .drill .line b{color:var(--sakura-soft);}
+  .drill .who{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.04em;margin-bottom:.2rem;}
+  .drill .row{padding:.3rem 0;border-bottom:1px dashed var(--line);}
+  .drill .row:last-child{border-bottom:none;}
+  .drill .rj{font-size:.78rem;color:var(--gold);}
+  .drill .en{font-size:.78rem;opacity:.75;}
+  .blank{display:inline-block;border-bottom:2px dotted var(--gold);min-width:5em;text-align:center;}
+  .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
+  .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
+  @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
+  footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag">下書き</span></div>
+    <h1>ユニット2：自己紹介（講師用）</h1>
+    <p class="sub">今日のゴール：名前と出身国を入れ替えながら、自己紹介が自然に言えるようになる。書く練習はまだしません。</p>
+  </div>
+</header>
+<main>
+
+  <section>
+    <h2>今日の単語（6つ）</h2>
+    <div class="word-grid"><div class="word-card"><span class="emoji">🙋</span><div class="jp">わたし</div><div class="romaji">watashi</div><div class="en">I / me</div></div><div class="word-card"><span class="emoji">📛</span><div class="jp">なまえ</div><div class="romaji">namae</div><div class="en">name</div></div><div class="word-card"><span class="emoji">🌏</span><div class="jp">くに</div><div class="romaji">kuni</div><div class="en">country</div></div><div class="word-card"><span class="emoji">🇯🇵</span><div class="jp">にほん</div><div class="romaji">nihon</div><div class="en">Japan</div></div><div class="word-card"><span class="emoji">🤝</span><div class="jp">はじめまして</div><div class="romaji">hajimemashite</div><div class="en">nice to meet you</div></div><div class="word-card"><span class="emoji">🙇</span><div class="jp">よろしく<br>おねがいします</div><div class="romaji">yoroshiku onegaishimasu</div><div class="en">nice to meet you / please treat me well</div></div></div>
+  </section>
+  <section>
+    <h2>読む練習（3〜5分）</h2>
+    <p class="lede">ひらがな表を見ながら、上の6語を声に出して読みます。</p>
+  </section>
+  <section>
+    <h2>会話ドリル（くり返し練習・10〜15分）</h2>
+    <p class="lede">まず名前を入れ替えて自己紹介パターンをくり返します。慣れてきたら、出身国も入れ替えて2つ目のパターンに進みます。</p>
+    <div class="drill"><div class="line"><b>A</b>：はじめまして。わたしは<span class="blank">＿＿</span>です。よろしくおねがいします。<br><span class="rj">Hajimemashite. Watashi wa ___ desu. Yoroshiku onegaishimasu.</span> <span class="en">Nice to meet you. I'm ___. Please be kind to me.</span></div><div class="line"><b>B</b>：はじめまして。わたしは<span class="blank">＿＿</span>です。よろしくおねがいします。<br><span class="rj">Hajimemashite. Watashi wa ___ desu. Yoroshiku onegaishimasu.</span> <span class="en">Nice to meet you. I'm ___. Please be kind to me.</span></div></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ラウンド</th><th>入れ替えるもの</th><th>ねらい</th></tr></thead>
+        <tbody>
+          <tr><th>1</th><td>自分の名前</td><td>基本の自己紹介文に慣れる</td></tr>
+          <tr><th>2</th><td>先生の名前・他の生徒の名前</td><td>相手の名前を聞いて言い直す練習</td></tr>
+          <tr><th>3</th><td>出身国（にほん／アメリカ 等）</td><td>2つ目のパターンに展開する</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="drill"><div class="line"><b>A</b>：わたしは<span class="blank">＿＿</span>からきました。<br><span class="rj">Watashi wa ___ kara kimashita.</span> <span class="en">I'm from ___.</span></div><div class="line"><b>B</b>：わたしは<span class="blank">＿＿</span>からきました。<br><span class="rj">Watashi wa ___ kara kimashita.</span> <span class="en">I'm from ___.</span></div></div>
+  </section>
+  <section>
+    <h2>まとめ（3分）</h2>
+    <p class="lede">最後に、自分の名前と出身国を入れて自己紹介を1回通しで言ってもらいます。</p>
+  </section>
+  <div class="note"><strong>講師メモ</strong><p style="margin:.4rem 0 0;">「よろしくおねがいします」は直訳が難しく、状況によって意味合いが変わる表現です。初対面のあいさつでは「仲良くしてください」に近いニュアンスで、"please treat me well" は文字どおりの意味に過ぎません。また「はじめまして」を使わず、この一言だけで nice to meet you 的に使われる場面もあります。この段階では細かく説明する必要はなく、あいさつのセットとして体に覚えてもらう程度で十分ですが、生徒から質問が出たら上記のニュアンスを伝えてください。</p></div>
+
+</main>
+<footer>Sakura Bloom Japanese Lessons — ユニット2・講師用（下書き）</footer>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conversation Lessons | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #21201c; --paper: #efe7d8; --paper-light: #f7f2e6;
+    --indigo: #1f3a5f; --sakura: #c97a97; --sakura-soft: #f1dbe4; --gold: #b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif, 'Hiragino Sans';
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: 76px; scroll-behavior: smooth; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  }
+  :root[data-theme="dark"] { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  h1, h2, h3 { font-family: 'Shippori Mincho', serif; margin: 0; }
+  a { color: inherit; }
+
+  header.hero { background: var(--indigo); color: var(--paper-light); padding: 2.6rem 1.5rem 2.6rem; position: relative; overflow: hidden; }
+  header.hero::before { content:""; position:absolute; right:-60px; top:-60px; width:260px; height:260px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%); opacity:0.35; }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .brand { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--sakura-soft); margin-bottom: 1.1rem; }
+  .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.35; font-weight: 700; }
+  .hero p.sub { margin-top: 0.9rem; font-size: 1rem; color: rgba(247,242,230,0.78); max-width: 52ch; line-height: 1.7; }
+
+  nav.toc { position: sticky; top: 0; z-index: 20; background: var(--paper-light); border-bottom: 1px solid var(--line); padding: 0 1rem; padding-top: env(safe-area-inset-top, 0px); }
+  .toc-inner { max-width: 760px; margin: 0 auto; display: flex; gap: 0.35rem; overflow-x: auto; padding: 0.7rem 0; }
+  .toc-inner a { flex: none; text-decoration: none; font-size: 0.82rem; padding: 0.42rem 0.75rem; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
+  .toc-inner a:hover { border-color: var(--indigo); }
+  .print-btn { margin-left: auto; background: var(--indigo); color: var(--paper-light) !important; border: none !important; cursor: pointer; font-family: inherit; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 2.6rem 1.4rem 5rem; }
+
+  .lesson { margin-bottom: 2.6rem; scroll-margin-top: 76px; background: var(--paper-light); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem 1.4rem 1.5rem; }
+  .lesson-head { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.7rem; }
+  .lesson-num { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Shippori Mincho', serif; font-size: 1.05rem; }
+  .lesson-emoji { font-size: 1.8rem; }
+  .lesson-title h3 { font-size: 1.15rem; color: var(--indigo); }
+  @media (prefers-color-scheme: dark) { .lesson-title h3 { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] .lesson-title h3 { color: var(--sakura-soft); }
+  .lesson-title p { margin: 0.15rem 0 0; font-size: 0.82rem; color: color-mix(in srgb, var(--ink) 60%, transparent); }
+
+  .dialogue { display: flex; flex-direction: column; gap: 0.55rem; margin: 1rem 0; }
+  .line { display: flex; gap: 0.7rem; align-items: flex-start; }
+  .speaker { flex: none; width: 2.6rem; font-size: 0.78rem; font-weight: 700; color: var(--sakura); padding-top: 0.15rem; }
+  .line .content { background: var(--paper); border-radius: 8px; padding: 0.5rem 0.8rem; flex: 1; min-width: 0; }
+  .line .jp { font-size: 0.98rem; font-weight: 700; }
+  .line .rj { font-size: 0.76rem; opacity: 0.65; margin-top: 0.1rem; }
+  .line .en { font-size: 0.78rem; opacity: 0.6; margin-top: 0.15rem; }
+
+  .vocab { background: color-mix(in srgb, var(--gold) 8%, var(--paper-light)); border: 1px dashed var(--gold); border-radius: 8px; padding: 0.8rem 1rem; font-size: 0.84rem; line-height: 1.7; }
+  .vocab strong { font-family: 'Shippori Mincho', serif; color: var(--indigo); }
+  @media (prefers-color-scheme: dark) { .vocab strong { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] .vocab strong { color: var(--sakura-soft); }
+
+  .intro-note { border: 1px dashed var(--gold); background: color-mix(in srgb, var(--gold) 8%, var(--paper-light)); border-radius: 8px; padding: 1rem 1.2rem; font-size: 0.9rem; line-height: 1.75; margin-bottom: 2rem; }
+  .intro-note strong { font-family: 'Shippori Mincho', serif; color: var(--indigo); }
+
+  footer { text-align: center; padding: 2.5rem 1rem 3.5rem; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.82rem; line-height: 1.8; }
+
+  @media print {
+    nav.toc, header.hero::before { display: none; }
+    header.hero { background: none; color: var(--ink); padding: 0 0 1rem; border-bottom: 2px solid var(--ink); }
+    header.hero p.sub { color: var(--ink); }
+    body { background: #fff; }
+    .lesson { break-inside: avoid; border-color: #999; margin-bottom: 1.6rem; }
+    .line .content { background: #f5f5f5; }
+    main { padding: 1rem 0.2rem; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS ・ 5</div>
+    <h1>Conversation Roleplay Lessons</h1>
+    <p class="sub">Roleplay conversation practice to use each lesson. Read it aloud, switching between roles A and B. Replace the ＿＿ blanks with your own information or words.</p>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="https://claude.ai/artifact/XJ9oZr7LhnQjdDpRp9Gvf9" style="color:var(--indigo); font-weight:700;">📚 Contents</a>
+    <a href="#l1">1</a><a href="#l2">2</a><a href="#l3">3</a><a href="#l4">4</a><a href="#l5">5</a>
+    <a href="#l6">6</a><a href="#l7">7</a><a href="#l8">8</a><a href="#l9">9</a><a href="#l10">10</a>
+    <button class="print-btn" onclick="window.print()">🖨 Print</button>
+  </div>
+</nav>
+
+<main>
+
+  <div class="intro-note">
+    <strong>How to use this page</strong>
+    <p style="margin:0.4rem 0 0;">Read it aloud in order: A→B→A→B. Try it once as written, then a second time filling in the ＿＿ blanks with your own words and swapping roles.</p>
+  </div>
+
+  <div class="lesson" id="l1">
+    <div class="lesson-head">
+      <div class="lesson-num">1</div>
+      <span class="lesson-emoji">🌸</span>
+      <div class="lesson-title"><h3>Self-Introduction</h3><p>Self-introduction — your first lesson</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">はじめまして。わたしは＿＿です。よろしくおねがいします。</div><div class="rj">Hajimemashite. Watashi wa ___ desu. Yoroshiku onegaishimasu.</div><div class="en">Nice to meet you. I'm ___. Please be kind to me.</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">はじめまして。わたしは＿＿です。よろしくおねがいします。</div><div class="rj">Hajimemashite. Watashi wa ___ desu. Yoroshiku onegaishimasu.</div><div class="en">Nice to meet you. I'm ___. Please be kind to me.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">どこからきましたか？</div><div class="rj">Doko kara kimashita ka?</div><div class="en">Where are you from?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿からきました。</div><div class="rj">___ kara kimashita.</div><div class="en">I'm from ___.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">にほんごをどのくらいべんきょうしていますか？</div><div class="rj">Nihongo wo dono kurai benkyou shiteimasu ka?</div><div class="en">How long have you studied Japanese?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿ぐらいです。</div><div class="rj">___ gurai desu.</div><div class="en">About ___.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> しゅみは＿です(My hobby is ___) ／ おなまえは？(What's your name?) ／ よろしくおねがいします(closing greeting)</div>
+  </div>
+
+  <div class="lesson" id="l2">
+    <div class="lesson-head">
+      <div class="lesson-num">2</div>
+      <span class="lesson-emoji">🍣</span>
+      <div class="lesson-title"><h3>Favorite Food</h3><p>Favorite food</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">すきなたべものは なんですか？</div><div class="rj">Suki na tabemono wa nan desu ka?</div><div class="en">What's your favorite food?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿がすきです。＿＿さんは？</div><div class="rj">___ ga suki desu. ___-san wa?</div><div class="en">I like ___. How about you?</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">にほんのたべもので なにか たべたことがありますか？</div><div class="rj">Nihon no tabemono de nanika tabeta koto ga arimasu ka?</div><div class="en">Have you tried any Japanese food?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">はい、＿＿をたべたことがあります。とても おいしかったです。</div><div class="rj">Hai, ___ wo tabeta koto ga arimasu. Totemo oishikatta desu.</div><div class="en">Yes, I've tried ___. It was delicious.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> すきです(like) ／ ＿をたべたことがあります(have eaten ___ before) ／ おいしい(delicious)</div>
+  </div>
+
+  <div class="lesson" id="l3">
+    <div class="lesson-head">
+      <div class="lesson-num">3</div>
+      <span class="lesson-emoji">🎨</span>
+      <div class="lesson-title"><h3>Hobbies</h3><p>Hobbies</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">しゅみは なんですか？</div><div class="rj">Shumi wa nan desu ka?</div><div class="en">What's your hobby?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿です。</div><div class="rj">___ desu.</div><div class="en">It's ___.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">いつから＿＿をしていますか？</div><div class="rj">Itsu kara ___ wo shiteimasu ka?</div><div class="en">Since when have you been doing ___?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿からです。とても たのしいです。</div><div class="rj">___ kara desu. Totemo tanoshii desu.</div><div class="en">Since ___. It's a lot of fun.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> しゅみ(hobby) ／ たのしい(fun) ／ いつから〜していますか(since when have you been doing ___)</div>
+  </div>
+
+  <div class="lesson" id="l4">
+    <div class="lesson-head">
+      <div class="lesson-num">4</div>
+      <span class="lesson-emoji">📅</span>
+      <div class="lesson-title"><h3>Weekend Plans</h3><p>Weekend plans</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">しゅうまつは なにをしますか？</div><div class="rj">Shuumatsu wa nani wo shimasu ka?</div><div class="en">What are you doing this weekend?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿をするよていです。＿＿さんは？</div><div class="rj">___ wo suru yotei desu. ___-san wa?</div><div class="en">I'm planning to ___. How about you?</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">わたしは＿＿にいきます。</div><div class="rj">Watashi wa ___ ni ikimasu.</div><div class="en">I'm going to ___.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> しゅうまつ(weekend) ／ よてい(plan) ／ ＿にいきます(go to ___)</div>
+  </div>
+
+  <div class="lesson" id="l5">
+    <div class="lesson-head">
+      <div class="lesson-num">5</div>
+      <span class="lesson-emoji">☀️</span>
+      <div class="lesson-title"><h3>Weather Small Talk</h3><p>Weather small talk</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">きょうはいいてんきですね。</div><div class="rj">Kyou wa ii tenki desu ne.</div><div class="en">The weather's nice today, isn't it.</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">そうですね。＿＿(くに/まち)のてんきはどうですか？</div><div class="rj">Sou desu ne. ___ no tenki wa dou desu ka?</div><div class="en">It is. What's the weather like in ___?</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">いまは＿＿です。にほんの なつは すきですか？</div><div class="rj">Ima wa ___ desu. Nihon no natsu wa suki desu ka?</div><div class="en">Right now it's ___. Do you like Japanese summers?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">ちょっとにがてです。あついですから。</div><div class="rj">Chotto nigate desu. Atsui desu kara.</div><div class="en">Not really — it's too hot.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> てんき(weather) ／ あつい・さむい(hot/cold) ／ にがてです(not good at / not fond of)</div>
+  </div>
+
+  <div class="lesson" id="l6">
+    <div class="lesson-head">
+      <div class="lesson-num">6</div>
+      <span class="lesson-emoji">☕</span>
+      <div class="lesson-title"><h3>Ordering at a Cafe</h3><p>Ordering at a cafe — A: staff, B: customer</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">いらっしゃいませ。ごちゅうもんは？</div><div class="rj">Irasshaimase. Go-chuumon wa?</div><div class="en">Welcome. What would you like to order?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿を おねがいします。</div><div class="rj">___ wo onegaishimasu.</div><div class="en">___, please.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">かしこまりました。ほかに なにか？</div><div class="rj">Kashikomarimashita. Hoka ni nanika?</div><div class="en">Certainly. Anything else?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">いいえ、だいじょうぶです。</div><div class="rj">Iie, daijoubu desu.</div><div class="en">No, that's all.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> いらっしゃいませ(welcome) ／ ごちゅうもん(order) ／ ＿をおねがいします(___, please)</div>
+  </div>
+
+  <div class="lesson" id="l7">
+    <div class="lesson-head">
+      <div class="lesson-num">7</div>
+      <span class="lesson-emoji">🗺️</span>
+      <div class="lesson-title"><h3>Asking for Directions</h3><p>Asking for directions</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">すみません、＿＿はどこですか？</div><div class="rj">Sumimasen, ___ wa doko desu ka?</div><div class="en">Excuse me, where is ___?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">まっすぐ いって、みぎに まがってください。</div><div class="rj">Massugu itte, migi ni magatte kudasai.</div><div class="en">Go straight, then turn right.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">ありがとうございます。あるいて なんぷんくらいですか？</div><div class="rj">Arigatou gozaimasu. Aruite nanpun kurai desu ka?</div><div class="en">Thank you. How many minutes on foot?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">5ふんくらいです。</div><div class="rj">Go-fun kurai desu.</div><div class="en">About 5 minutes.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> まっすぐ(straight) ／ みぎ・ひだり(right/left) ／ まがってください(please turn)</div>
+  </div>
+
+  <div class="lesson" id="l8">
+    <div class="lesson-head">
+      <div class="lesson-num">8</div>
+      <span class="lesson-emoji">🛍️</span>
+      <div class="lesson-title"><h3>Shopping</h3><p>Shopping — A: customer, B: staff</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">すみません、これはいくらですか？</div><div class="rj">Sumimasen, kore wa ikura desu ka?</div><div class="en">Excuse me, how much is this?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿えんです。</div><div class="rj">___ en desu.</div><div class="en">It's ___ yen.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">じゃあ、これをください。</div><div class="rj">Jaa, kore wo kudasai.</div><div class="en">Okay, I'll take this.</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">かしこまりました。ぜんぶで＿＿えんです。</div><div class="rj">Kashikomarimashita. Zenbu de ___ en desu.</div><div class="en">Certainly. That's ___ yen in total.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> いくらですか(how much) ／ ＿をください(please give me ___) ／ ぜんぶで(in total)</div>
+  </div>
+
+  <div class="lesson" id="l9">
+    <div class="lesson-head">
+      <div class="lesson-num">9</div>
+      <span class="lesson-emoji">👪</span>
+      <div class="lesson-title"><h3>Talking About Family</h3><p>Talking about family — uses the かぞく words from the Word List</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">かぞくは なんにんですか？</div><div class="rj">Kazoku wa nannin desu ka?</div><div class="en">How many people in your family?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿にんです。＿＿と＿＿と＿＿です。</div><div class="rj">___ nin desu. ___ to ___ to ___ desu.</div><div class="en">___ people. There's ___, ___, and ___.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">きょうだいは いますか？</div><div class="rj">Kyoudai wa imasu ka?</div><div class="en">Do you have any siblings?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">はい、＿＿が います。／いいえ、ひとりっこです。</div><div class="rj">Hai, ___ ga imasu. / Iie, hitorikko desu.</div><div class="en">Yes, I have ___. / No, I'm an only child.</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> なんにんですか(how many people) ／ きょうだい(siblings) ／ ひとりっこ(only child)</div>
+  </div>
+
+  <div class="lesson" id="l10">
+    <div class="lesson-head">
+      <div class="lesson-num">10</div>
+      <span class="lesson-emoji">🌸</span>
+      <div class="lesson-title"><h3>Reflections & Wrap-up</h3><p>Reflections & wrap-up</p></div>
+    </div>
+    <div class="dialogue">
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">にほんごをべんきょうしている りゆうは なんですか？</div><div class="rj">Nihongo wo benkyou shiteiru riyuu wa nan desu ka?</div><div class="en">Why are you studying Japanese?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿です。</div><div class="rj">___ desu.</div><div class="en">It's ___.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">これまでのレッスンで なにが いちばん たのしかったですか？</div><div class="rj">Kore made no ressun de nani ga ichiban tanoshikatta desu ka?</div><div class="en">What was the most fun part of the lessons so far?</div></div></div>
+      <div class="line"><div class="speaker">B</div><div class="content"><div class="jp">＿＿がたのしかったです。</div><div class="rj">___ ga tanoshikatta desu.</div><div class="en">___ was fun.</div></div></div>
+      <div class="line"><div class="speaker">A</div><div class="content"><div class="jp">これからも いっしょに がんばりましょう！</div><div class="rj">Kore kara mo issho ni ganbarimashou!</div><div class="en">Let's keep doing our best together!</div></div></div>
+    </div>
+    <div class="vocab"><strong>Useful phrases:</strong> りゆう(reason) ／ たのしかった(was fun) ／ がんばりましょう(let's do our best)</div>
+  </div>
+
+</main>
+
+<footer>
+  Sakura Bloom Japanese Lessons — Conversation Lessons
+</footer>
+
+</body>
+</html>

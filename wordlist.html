@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Word List | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #21201c; --paper: #efe7d8; --paper-light: #f7f2e6;
+    --indigo: #1f3a5f; --sakura: #c97a97; --sakura-soft: #f1dbe4; --gold: #b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif, 'Hiragino Sans';
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: 76px; scroll-behavior: smooth; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  }
+  :root[data-theme="dark"] { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  h1, h2, h3 { font-family: 'Shippori Mincho', serif; margin: 0; }
+  a { color: inherit; }
+
+  header.hero { background: var(--indigo); color: var(--paper-light); padding: 2.6rem 1.5rem 2.6rem; position: relative; overflow: hidden; }
+  header.hero::before { content:""; position:absolute; right:-60px; top:-60px; width:260px; height:260px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%); opacity:0.35; }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .brand { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--sakura-soft); margin-bottom: 1.1rem; }
+  .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.35; font-weight: 700; }
+  .hero p.sub { margin-top: 0.9rem; font-size: 1rem; color: rgba(247,242,230,0.78); max-width: 50ch; line-height: 1.7; }
+
+  nav.toc { position: sticky; top: 0; z-index: 20; background: var(--paper-light); border-bottom: 1px solid var(--line); padding: 0 1rem; padding-top: env(safe-area-inset-top, 0px); }
+  .toc-inner { max-width: 760px; margin: 0 auto; display: flex; gap: 0.4rem; overflow-x: auto; padding: 0.7rem 0; }
+  .toc-inner a { flex: none; text-decoration: none; font-size: 0.85rem; padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
+  .toc-inner a:hover { border-color: var(--indigo); }
+  .print-btn { margin-left: auto; background: var(--indigo); color: var(--paper-light) !important; border: none !important; cursor: pointer; font-family: inherit; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 2.6rem 1.4rem 5rem; }
+  section.group { margin-bottom: 3rem; scroll-margin-top: 76px; }
+  section.group h2 { font-size: 1.35rem; color: var(--indigo); margin-bottom: 0.3rem; }
+  @media (prefers-color-scheme: dark) { section.group h2 { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] section.group h2 { color: var(--sakura-soft); }
+  section.group .lede { color: color-mix(in srgb, var(--ink) 68%, transparent); font-size: 0.92rem; margin-bottom: 1.1rem; }
+
+  .word-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.7rem; }
+  .word-card { background: var(--paper-light); border: 1px solid var(--line); border-radius: 10px; padding: 0.85rem 1rem; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .word-card .emoji { font-size: 1.6rem; line-height: 1; flex: none; margin-top: 0.1rem; }
+  .word-card .text-block { min-width: 0; }
+  .word-card .kana { font-size: 1.2rem; font-weight: 700; }
+  .word-card .romaji { font-size: 0.8rem; opacity: 0.7; margin-top: 0.1rem; }
+  .word-card .mean { font-size: 0.85rem; margin-top: 0.4rem; border-top: 1px dashed var(--line); padding-top: 0.35rem; }
+
+  .note { margin-top: 1rem; border: 1px dashed var(--gold); background: color-mix(in srgb, var(--gold) 8%, var(--paper-light)); border-radius: 8px; padding: 1rem 1.2rem; font-size: 0.9rem; line-height: 1.75; }
+  .note strong { font-family: 'Shippori Mincho', serif; color: var(--indigo); font-weight: 700; }
+  @media (prefers-color-scheme: dark) { .note strong { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] .note strong { color: var(--sakura-soft); }
+
+  footer { text-align: center; padding: 2.5rem 1rem 3.5rem; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.82rem; line-height: 1.8; }
+
+  @media print {
+    nav.toc, header.hero::before { display: none; }
+    header.hero { background: none; color: var(--ink); padding: 0 0 1rem; border-bottom: 2px solid var(--ink); }
+    header.hero p.sub { color: var(--ink); }
+    body { background: #fff; }
+    section.group { break-inside: avoid; margin-bottom: 1.6rem; }
+    .word-card { border-color: #999; }
+    main { padding: 1rem 0.2rem; max-width: 100%; }
+    .word-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS ・ 3</div>
+    <h1>Reading Practice Word List</h1>
+    <p class="sub">Practice reading real words using the hiragana and katakana you've learned. Organized by category below.</p>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="https://claude.ai/artifact/XJ9oZr7LhnQjdDpRp9Gvf9" style="color:var(--indigo); font-weight:700;">📚 Contents</a>
+    <a href="#aisatsu">Greetings</a>
+    <a href="#kazoku">Family</a>
+    <a href="#ie">Around the House</a>
+    <a href="#tatemono">Buildings</a>
+    <a href="#tabemono">Food</a>
+    <a href="#jikan">Time &amp; Dates</a>
+    <a href="#renshuu">Reading Practice</a>
+    <button class="print-btn" onclick="window.print()">🖨 Print</button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="group" id="aisatsu">
+    <h2>あいさつ — Greetings</h2>
+    <p class="lede">Words you'll use at the start and end of every lesson.</p>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🌅</span><div class="text-block"><div class="kana">おはよう</div><div class="romaji">ohayou</div><div class="mean">Good morning</div></div></div>
+      <div class="word-card"><span class="emoji">☀️</span><div class="text-block"><div class="kana">こんにちは</div><div class="romaji">konnichiwa</div><div class="mean">Hello / Good afternoon</div></div></div>
+      <div class="word-card"><span class="emoji">🌙</span><div class="text-block"><div class="kana">こんばんは</div><div class="romaji">konbanwa</div><div class="mean">Good evening</div></div></div>
+      <div class="word-card"><span class="emoji">🙏</span><div class="text-block"><div class="kana">ありがとう</div><div class="romaji">arigatou</div><div class="mean">Thank you</div></div></div>
+      <div class="word-card"><span class="emoji">🙇</span><div class="text-block"><div class="kana">すみません</div><div class="romaji">sumimasen</div><div class="mean">Excuse me / Sorry</div></div></div>
+      <div class="word-card"><span class="emoji">👋</span><div class="text-block"><div class="kana">さようなら</div><div class="romaji">sayounara</div><div class="mean">Goodbye</div></div></div>
+      <div class="word-card"><span class="emoji">🤝</span><div class="text-block"><div class="kana">はじめまして</div><div class="romaji">hajimemashite</div><div class="mean">Nice to meet you</div></div></div>
+    </div>
+  </section>
+
+  <section class="group" id="kazoku">
+    <h2>かぞく — Family</h2>
+    <p class="lede">Friendly, everyday terms used when talking about your own family or someone else's.</p>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">👪</span><div class="text-block"><div class="kana">かぞく</div><div class="romaji">kazoku</div><div class="mean">Family</div></div></div>
+      <div class="word-card"><span class="emoji">👩</span><div class="text-block"><div class="kana">おかあさん</div><div class="romaji">okaasan</div><div class="mean">Mother</div></div></div>
+      <div class="word-card"><span class="emoji">👨</span><div class="text-block"><div class="kana">おとうさん</div><div class="romaji">otousan</div><div class="mean">Father</div></div></div>
+      <div class="word-card"><span class="emoji">🧑‍🦱</span><div class="text-block"><div class="kana">おにいさん</div><div class="romaji">oniisan</div><div class="mean">Older brother</div></div></div>
+      <div class="word-card"><span class="emoji">👩‍🦰</span><div class="text-block"><div class="kana">おねえさん</div><div class="romaji">oneesan</div><div class="mean">Older sister</div></div></div>
+      <div class="word-card"><span class="emoji">👦</span><div class="text-block"><div class="kana">おとうと</div><div class="romaji">otouto</div><div class="mean">Younger brother</div></div></div>
+      <div class="word-card"><span class="emoji">👧</span><div class="text-block"><div class="kana">いもうと</div><div class="romaji">imouto</div><div class="mean">Younger sister</div></div></div>
+      <div class="word-card"><span class="emoji">🧒</span><div class="text-block"><div class="kana">こども</div><div class="romaji">kodomo</div><div class="mean">Child / Children</div></div></div>
+      <div class="word-card"><span class="emoji">👴</span><div class="text-block"><div class="kana">おじいさん</div><div class="romaji">ojiisan</div><div class="mean">Grandfather</div></div></div>
+      <div class="word-card"><span class="emoji">👵</span><div class="text-block"><div class="kana">おばあさん</div><div class="romaji">obaasan</div><div class="mean">Grandmother</div></div></div>
+      <div class="word-card"><span class="emoji">🧔</span><div class="text-block"><div class="kana">おじさん</div><div class="romaji">ojisan</div><div class="mean">Uncle</div></div></div>
+      <div class="word-card"><span class="emoji">👩‍🦳</span><div class="text-block"><div class="kana">おばさん</div><div class="romaji">obasan</div><div class="mean">Aunt</div></div></div>
+      <div class="word-card"><span class="emoji">🧑‍🤝‍🧑</span><div class="text-block"><div class="kana">いとこ</div><div class="romaji">itoko</div><div class="mean">Cousin</div></div></div>
+    </div>
+    <div class="note">
+      <strong>Usage tip</strong>
+      <p style="margin:0.4rem 0 0;">Words like おかあさん and おとうさん work both for your own family and someone else's. They're the most natural choice for casual conversation practice, so start with these.</p>
+    </div>
+  </section>
+
+  <section class="group" id="ie">
+    <h2>Around the House</h2>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🍽️</span><div class="text-block"><div class="kana">テーブル</div><div class="romaji">te-buru</div><div class="mean">Table</div></div></div>
+      <div class="word-card"><span class="emoji">🪑</span><div class="text-block"><div class="kana">いす</div><div class="romaji">isu</div><div class="mean">Chair</div></div></div>
+      <div class="word-card"><span class="emoji">🧊</span><div class="text-block"><div class="kana">れいぞうこ</div><div class="romaji">reizouko</div><div class="mean">Refrigerator</div></div></div>
+      <div class="word-card"><span class="emoji">📺</span><div class="text-block"><div class="kana">テレビ</div><div class="romaji">terebi</div><div class="mean">TV</div></div></div>
+      <div class="word-card"><span class="emoji">🛋️</span><div class="text-block"><div class="kana">ソファ</div><div class="romaji">sofa</div><div class="mean">Sofa</div></div></div>
+      <div class="word-card"><span class="emoji">🛏️</span><div class="text-block"><div class="kana">ベッド</div><div class="romaji">beddo</div><div class="mean">Bed</div></div></div>
+      <div class="word-card"><span class="emoji">🪟</span><div class="text-block"><div class="kana">まど</div><div class="romaji">mado</div><div class="mean">Window</div></div></div>
+      <div class="word-card"><span class="emoji">🚪</span><div class="text-block"><div class="kana">ドア</div><div class="romaji">doa</div><div class="mean">Door</div></div></div>
+    </div>
+  </section>
+
+  <section class="group" id="tatemono">
+    <h2>Buildings &amp; Places</h2>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🏥</span><div class="text-block"><div class="kana">びょういん</div><div class="romaji">byouin</div><div class="mean">Hospital</div></div></div>
+      <div class="word-card"><span class="emoji">🏫</span><div class="text-block"><div class="kana">がっこう</div><div class="romaji">gakkou</div><div class="mean">School</div></div></div>
+      <div class="word-card"><span class="emoji">📚</span><div class="text-block"><div class="kana">としょかん</div><div class="romaji">toshokan</div><div class="mean">Library</div></div></div>
+      <div class="word-card"><span class="emoji">🌳</span><div class="text-block"><div class="kana">こうえん</div><div class="romaji">kouen</div><div class="mean">Park</div></div></div>
+      <div class="word-card"><span class="emoji">🚉</span><div class="text-block"><div class="kana">えき</div><div class="romaji">eki</div><div class="mean">Station</div></div></div>
+      <div class="word-card"><span class="emoji">🛒</span><div class="text-block"><div class="kana">スーパー</div><div class="romaji">su-pa-</div><div class="mean">Supermarket</div></div></div>
+      <div class="word-card"><span class="emoji">🏦</span><div class="text-block"><div class="kana">ぎんこう</div><div class="romaji">ginkou</div><div class="mean">Bank</div></div></div>
+      <div class="word-card"><span class="emoji">🏛️</span><div class="text-block"><div class="kana">やくしょ</div><div class="romaji">yakusho</div><div class="mean">City / Government office</div></div></div>
+    </div>
+  </section>
+
+  <section class="group" id="tabemono">
+    <h2>たべもの — Food & Drink</h2>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🍚</span><div class="text-block"><div class="kana">たべる</div><div class="romaji">taberu</div><div class="mean">to eat</div></div></div>
+      <div class="word-card"><span class="emoji">🥤</span><div class="text-block"><div class="kana">のむ</div><div class="romaji">nomu</div><div class="mean">to drink</div></div></div>
+      <div class="word-card"><span class="emoji">💧</span><div class="text-block"><div class="kana">みず</div><div class="romaji">mizu</div><div class="mean">Water</div></div></div>
+      <div class="word-card"><span class="emoji">🍵</span><div class="text-block"><div class="kana">おちゃ</div><div class="romaji">ocha</div><div class="mean">Tea</div></div></div>
+      <div class="word-card"><span class="emoji">🍚</span><div class="text-block"><div class="kana">ごはん</div><div class="romaji">gohan</div><div class="mean">Rice / Meal</div></div></div>
+      <div class="word-card"><span class="emoji">🐟</span><div class="text-block"><div class="kana">さかな</div><div class="romaji">sakana</div><div class="mean">Fish</div></div></div>
+      <div class="word-card"><span class="emoji">🥩</span><div class="text-block"><div class="kana">にく</div><div class="romaji">niku</div><div class="mean">Meat</div></div></div>
+      <div class="word-card"><span class="emoji">🥦</span><div class="text-block"><div class="kana">やさい</div><div class="romaji">yasai</div><div class="mean">Vegetable</div></div></div>
+    </div>
+  </section>
+
+  <section class="group" id="jikan">
+    <h2>じかん — Time, Days &amp; Months</h2>
+    <p class="lede">Numbers 1–100 are in the <a href="https://claude.ai/artifact/QadmMHjntvn9qBdx3LFRX7" style="color:var(--indigo);text-decoration:underline;">Numbers &amp; Counters</a> chapter — these build on them for telling time and dates.</p>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🕖</span><div class="text-block"><div class="kana">〜じ</div><div class="romaji">~ji</div><div class="mean">~ o'clock</div></div></div>
+      <div class="word-card"><span class="emoji">🕡</span><div class="text-block"><div class="kana">〜じはん</div><div class="romaji">~ji han</div><div class="mean">half past ~</div></div></div>
+      <div class="word-card"><span class="emoji">📅</span><div class="text-block"><div class="kana">きょう</div><div class="romaji">kyou</div><div class="mean">today</div></div></div>
+      <div class="word-card"><span class="emoji">📆</span><div class="text-block"><div class="kana">あした</div><div class="romaji">ashita</div><div class="mean">tomorrow</div></div></div>
+      <div class="word-card"><span class="emoji">🗓️</span><div class="text-block"><div class="kana">きのう</div><div class="romaji">kinou</div><div class="mean">yesterday</div></div></div>
+      <div class="word-card"><span class="emoji">📈</span><div class="text-block"><div class="kana">らいしゅう</div><div class="romaji">raishuu</div><div class="mean">next week</div></div></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th></tr></thead>
+        <tbody><tr>
+          <td><span class="kana">いちがつ</span><span class="romaji">ichigatsu</span></td>
+          <td><span class="kana">にがつ</span><span class="romaji">nigatsu</span></td>
+          <td><span class="kana">さんがつ</span><span class="romaji">sangatsu</span></td>
+          <td><span class="kana">しがつ</span><span class="romaji">shigatsu</span></td>
+          <td><span class="kana">ごがつ</span><span class="romaji">gogatsu</span></td>
+          <td><span class="kana">ろくがつ</span><span class="romaji">rokugatsu</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr></thead>
+        <tbody><tr>
+          <td><span class="kana">しちがつ</span><span class="romaji">shichigatsu</span></td>
+          <td><span class="kana">はちがつ</span><span class="romaji">hachigatsu</span></td>
+          <td><span class="kana">くがつ</span><span class="romaji">kugatsu</span></td>
+          <td><span class="kana">じゅうがつ</span><span class="romaji">juugatsu</span></td>
+          <td><span class="kana">じゅういちがつ</span><span class="romaji">juuichigatsu</span></td>
+          <td><span class="kana">じゅうにがつ</span><span class="romaji">juunigatsu</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="note"><strong>Note</strong><p style="margin:0.4rem 0 0;">Months are just the number + がつ (month), with two irregulars: 4月=しがつ (not よんがつ) and 7月=しちがつ (not なながつ).</p></div>
+  </section>
+
+  <section class="group" id="renshuu">
+    <h2>Reading Practice — Tricky Sounds</h2>
+    <p class="lede">Words that include small っ, long vowels, and ゃゅょ. Take your time reading these aloud.</p>
+    <div class="word-grid">
+      <div class="word-card"><span class="emoji">🏫</span><div class="text-block"><div class="kana">がっこう</div><div class="romaji">gakkou</div><div class="mean">School (small っ + long vowel)</div></div></div>
+      <div class="word-card"><span class="emoji">👩</span><div class="text-block"><div class="kana">おかあさん</div><div class="romaji">okaasan</div><div class="mean">Mother (long vowel)</div></div></div>
+      <div class="word-card"><span class="emoji">🧑‍🦱</span><div class="text-block"><div class="kana">おにいさん</div><div class="romaji">oniisan</div><div class="mean">Older brother (long vowel)</div></div></div>
+      <div class="word-card"><span class="emoji">📅</span><div class="text-block"><div class="kana">きょう</div><div class="romaji">kyou</div><div class="mean">Today (y-sound + long vowel)</div></div></div>
+      <div class="word-card"><span class="emoji">📷</span><div class="text-block"><div class="kana">しゃしん</div><div class="romaji">shashin</div><div class="mean">Photo (y-sound)</div></div></div>
+      <div class="word-card"><span class="emoji">🎓</span><div class="text-block"><div class="kana">がくせい</div><div class="romaji">gakusei</div><div class="mean">Student (long vowel)</div></div></div>
+      <div class="word-card"><span class="emoji">✉️</span><div class="text-block"><div class="kana">きって</div><div class="romaji">kitte</div><div class="mean">Stamp (small っ)</div></div></div>
+      <div class="word-card"><span class="emoji">📖</span><div class="text-block"><div class="kana">じゅぎょう</div><div class="romaji">jugyou</div><div class="mean">Class / Lesson (y-sound + long vowel)</div></div></div>
+    </div>
+    <div class="note">
+      <strong>Usage tip</strong>
+      <p style="margin:0.4rem 0 0;">Have the student read these aloud during the lesson, and give in-the-moment feedback on habits you notice (skipping the small っ, cutting long vowels short, etc).</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Sakura Bloom Japanese Lessons — Word List
+</footer>
+
+</body>
+</html>

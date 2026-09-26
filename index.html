@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sakura Bloom Japanese — Contents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #21201c; --paper: #efe7d8; --paper-light: #f7f2e6;
+    --indigo: #1f3a5f; --sakura: #c97a97; --sakura-soft: #f1dbe4; --gold: #b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif, 'Hiragino Sans';
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  }
+  :root[data-theme="dark"] { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  h1, h2, h3 { font-family: 'Shippori Mincho', serif; margin: 0; }
+  a { color: inherit; }
+
+  header.hero { background: var(--indigo); color: var(--paper-light); padding: 3.4rem 1.5rem 3rem; position: relative; overflow: hidden; }
+  header.hero::before { content:""; position:absolute; right:-60px; top:-60px; width:260px; height:260px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%); opacity:0.35; }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .brand { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--sakura-soft); margin-bottom: 1.1rem; }
+  .hero h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.35; font-weight: 700; }
+  .hero p.sub { margin-top: 0.9rem; font-size: 1rem; color: rgba(247,242,230,0.78); max-width: 48ch; line-height: 1.7; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 2.6rem 1.4rem 5rem; }
+
+  .chapter-link {
+    display: flex; align-items: center; gap: 1.1rem;
+    background: var(--paper-light); border: 1px solid var(--line); border-radius: 12px;
+    padding: 1.2rem 1.3rem; margin-bottom: 0.9rem; text-decoration: none; color: var(--ink);
+    transition: border-color 0.15s ease;
+  }
+  .chapter-link:hover { border-color: var(--indigo); }
+  .seal {
+    flex: none; width: 48px; height: 48px; border-radius: 50%;
+    border: 2px solid var(--gold); color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Shippori Mincho', serif; font-size: 1.35rem;
+  }
+  .chapter-text h2 { font-size: 1.18rem; margin-bottom: 0.25rem; }
+  .chapter-text p { margin: 0; font-size: 0.88rem; color: color-mix(in srgb, var(--ink) 65%, transparent); line-height: 1.6; }
+  .arrow { margin-left: auto; flex: none; font-size: 1.2rem; color: var(--sakura); }
+  .unit-row { display: flex; align-items: center; gap: 1.1rem; background: var(--paper-light); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.3rem; margin-bottom: 0.9rem; }
+  .unit-row .sub-links a { color: var(--indigo); text-decoration: underline; margin-right: 1rem; font-size: 0.9rem; }
+  @media (prefers-color-scheme: dark) { .unit-row .sub-links a { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] .unit-row .sub-links a { color: var(--sakura-soft); }
+
+  .status-note {
+    font-size: 0.82rem;
+    color: color-mix(in srgb, var(--ink) 55%, transparent);
+    margin: 2.2rem 0 0.6rem;
+    padding-left: 0.2rem;
+  }
+
+  footer { text-align: center; padding: 2.5rem 1rem 3.5rem; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.82rem; line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS</div>
+    <h1>Lesson Materials<br>Table of Contents</h1>
+    <p class="sub">Materials for Zoom lessons that double as a self-study textbook for students. Pick a chapter below.</p>
+  </div>
+</header>
+
+<main>
+  <a class="chapter-link" href="hiragana.html">
+    <div class="seal">1</div>
+    <div class="chapter-text">
+      <h2>Hiragana Chart</h2>
+      <p>Basic, voiced, y-sounds, and special sounds — hiragana matched to romaji, with pronunciation tips.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="katakana.html">
+    <div class="seal">2</div>
+    <div class="chapter-text">
+      <h2>Katakana Chart</h2>
+      <p>The same structure as the hiragana chart, plus katakana-only rules like long vowels and small vowels.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="wordlist.html">
+    <div class="seal">3</div>
+    <div class="chapter-text">
+      <h2>Word List</h2>
+      <p>Greetings, numbers, family, things at home, buildings, food, time & months — plus tricky words for reading practice.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="counters.html">
+    <div class="seal">4</div>
+    <div class="chapter-text">
+      <h2>Japanese Counters</h2>
+      <p>Numbers 1–100 and how counting words change depending on what you're counting, with everyday example sentences.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="conversation-lessons.html">
+    <div class="seal">5</div>
+    <div class="chapter-text">
+      <h2>Conversation Lessons</h2>
+      <p>10 roleplay conversation lessons to use each session, starting with self-introduction.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="teacher-guide.html">
+    <div class="seal">G</div>
+    <div class="chapter-text">
+      <h2>講師用ガイド</h2>
+      <p>ユニット制レッスン運用の全体ガイド。</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <a class="chapter-link" href="syllabus.html">
+    <div class="seal">S</div>
+    <div class="chapter-text">
+      <h2>シラバス</h2>
+      <p>ユニット制シラバスの全体設計図（全21ユニット）。</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <p class="status-note">ユニット制教材（レベルチェック→該当ユニットから開始）</p>
+
+  <div class="unit-row">
+    <div class="seal">0</div>
+    <div class="chapter-text">
+      <h2>ユニット0：おとをよむ</h2>
+      <div class="sub-links"><a href="unit0-teacher.html">講師用</a><a href="unit0-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">1</div>
+    <div class="chapter-text">
+      <h2>ユニット1：あいさつ</h2>
+      <div class="sub-links"><a href="unit1-teacher.html">講師用</a><a href="unit1-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">2</div>
+    <div class="chapter-text">
+      <h2>ユニット2：自己紹介</h2>
+      <div class="sub-links"><a href="unit2-teacher.html">講師用</a><a href="unit2-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">3</div>
+    <div class="chapter-text">
+      <h2>ユニット3：なに</h2>
+      <div class="sub-links"><a href="unit3-teacher.html">講師用</a><a href="unit3-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">4</div>
+    <div class="chapter-text">
+      <h2>ユニット4：どこ</h2>
+      <div class="sub-links"><a href="unit4-teacher.html">講師用</a><a href="unit4-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">5</div>
+    <div class="chapter-text">
+      <h2>ユニット5：だれ</h2>
+      <div class="sub-links"><a href="unit5-teacher.html">講師用</a><a href="unit5-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">6</div>
+    <div class="chapter-text">
+      <h2>ユニット6：数字・年齢</h2>
+      <div class="sub-links"><a href="unit6-teacher.html">講師用</a><a href="unit6-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">7</div>
+    <div class="chapter-text">
+      <h2>ユニット7：好きな食べ物</h2>
+      <div class="sub-links"><a href="unit7-teacher.html">講師用</a><a href="unit7-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">8</div>
+    <div class="chapter-text">
+      <h2>ユニット8：趣味</h2>
+      <div class="sub-links"><a href="unit8-teacher.html">講師用</a><a href="unit8-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">9</div>
+    <div class="chapter-text">
+      <h2>ユニット9：家族</h2>
+      <div class="sub-links"><a href="unit9-teacher.html">講師用</a><a href="unit9-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">10</div>
+    <div class="chapter-text">
+      <h2>ユニット10：時間・一日の流れ</h2>
+      <div class="sub-links"><a href="unit10-teacher.html">講師用</a><a href="unit10-student.html">生徒用</a></div>
+    </div>
+  </div>
+  <div class="unit-row">
+    <div class="seal">11</div>
+    <div class="chapter-text">
+      <h2>ユニット11：週末の予定</h2>
+      <div class="sub-links"><a href="unit11-teacher.html">講師用</a><a href="unit11-student.html">生徒用</a></div>
+    </div>
+  </div>
+
+  <p class="status-note">フェーズC（ユニット12〜18：天気・道案内・カフェ・買い物・病院薬局・郵便宅配・電話）は準備中です。</p>
+</main>
+
+<footer>
+  Sakura Bloom Japanese Lessons
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japanese Numbers & Counters | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #21201c; --paper: #efe7d8; --paper-light: #f7f2e6;
+    --indigo: #1f3a5f; --sakura: #c97a97; --sakura-soft: #f1dbe4; --gold: #b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family: 'Zen Kaku Gothic New', -apple-system, sans-serif, 'Hiragino Sans';
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: 76px; scroll-behavior: smooth; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  }
+  :root[data-theme="dark"] { --paper:#1b1815; --paper-light:#24211c; --ink:#eee7d8; --line:rgba(238,231,216,0.16); }
+  h1, h2, h3 { font-family: 'Shippori Mincho', serif; margin: 0; }
+  a { color: inherit; }
+
+  header.hero { background: var(--indigo); color: var(--paper-light); padding: 2.6rem 1.5rem 2.6rem; position: relative; overflow: hidden; }
+  header.hero::before { content:""; position:absolute; right:-60px; top:-60px; width:260px; height:260px; border-radius:50%; background: radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%); opacity:0.35; }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .brand { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--sakura-soft); margin-bottom: 1.1rem; }
+  .hero h1 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.35; font-weight: 700; }
+  .hero p.sub { margin-top: 0.9rem; font-size: 1rem; color: rgba(247,242,230,0.78); max-width: 50ch; line-height: 1.7; }
+
+  nav.toc { position: sticky; top: 0; z-index: 20; background: var(--paper-light); border-bottom: 1px solid var(--line); padding: 0 1rem; padding-top: env(safe-area-inset-top, 0px); }
+  .toc-inner { max-width: 760px; margin: 0 auto; display: flex; gap: 0.4rem; overflow-x: auto; padding: 0.7rem 0; }
+  .toc-inner a { flex: none; text-decoration: none; font-size: 0.85rem; padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
+  .toc-inner a:hover { border-color: var(--indigo); }
+  .print-btn { margin-left: auto; background: var(--indigo); color: var(--paper-light) !important; border: none !important; cursor: pointer; font-family: inherit; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 2.6rem 1.4rem 5rem; }
+  section.group { margin-bottom: 3rem; scroll-margin-top: 76px; }
+  section.group h2 { font-size: 1.3rem; color: var(--indigo); margin-bottom: 0.3rem; }
+  @media (prefers-color-scheme: dark) { section.group h2 { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] section.group h2 { color: var(--sakura-soft); }
+  section.group .lede { color: color-mix(in srgb, var(--ink) 68%, transparent); font-size: 0.92rem; margin-bottom: 1.1rem; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--paper-light); margin-bottom: 0.8rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 0.92rem; }
+  th, td { border: 1px solid var(--line); padding: 0.6rem 0.5rem; text-align: center; }
+  thead th { background: var(--indigo); color: var(--paper-light); font-weight: 500; font-size: 0.82rem; }
+  tbody th { background: color-mix(in srgb, var(--indigo) 10%, var(--paper-light)); font-weight: 700; }
+  td .kana { font-size: 1.05rem; display: block; }
+  td .romaji { font-size: 0.72rem; opacity: 0.7; }
+
+  .note { margin-top: 1rem; border: 1px dashed var(--gold); background: color-mix(in srgb, var(--gold) 8%, var(--paper-light)); border-radius: 8px; padding: 1rem 1.2rem; font-size: 0.9rem; line-height: 1.75; }
+  .note strong { font-family: 'Shippori Mincho', serif; color: var(--indigo); font-weight: 700; }
+  @media (prefers-color-scheme: dark) { .note strong { color: var(--sakura-soft); } }
+  :root[data-theme="dark"] .note strong { color: var(--sakura-soft); }
+  .note ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+  .note li { margin-bottom: 0.25rem; }
+
+  .example { background: var(--paper-light); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.8rem; }
+  .example .jp { font-size: 1.05rem; font-weight: 700; }
+  .example .rj { font-size: 0.82rem; opacity: 0.7; margin-top: 0.1rem; }
+  .example .en { font-size: 0.85rem; margin-top: 0.35rem; border-top: 1px dashed var(--line); padding-top: 0.35rem; }
+
+  footer { text-align: center; padding: 2.5rem 1rem 3.5rem; color: color-mix(in srgb, var(--ink) 55%, transparent); font-size: 0.82rem; line-height: 1.8; }
+
+  @media print {
+    nav.toc, header.hero::before { display: none; }
+    header.hero { background: none; color: var(--ink); padding: 0 0 1rem; border-bottom: 2px solid var(--ink); }
+    header.hero p.sub { color: var(--ink); }
+    body { background: #fff; }
+    section.group { break-inside: avoid; margin-bottom: 1.6rem; }
+    .table-wrap, .example { border-color: #999; }
+    main { padding: 1rem 0.2rem; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS ・ 4</div>
+    <h1>Japanese Numbers &amp; Counters</h1>
+    <p class="sub">Numbers 1–100, plus how the counting word changes depending on what you're counting. Start with the most common ones, and watch for irregular pronunciation changes.</p>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="https://claude.ai/artifact/XJ9oZr7LhnQjdDpRp9Gvf9" style="color:var(--indigo); font-weight:700;">📚 Contents</a>
+    <a href="#suuji">Numbers 1–100</a>
+    <a href="#kihon">Basic Counters</a>
+    <a href="#sonota">More Counters</a>
+    <a href="#reibun">Examples</a>
+    <button class="print-btn" onclick="window.print()">🖨 Print</button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="group" id="suuji">
+    <h2>すうじ — Numbers 1–100</h2>
+    <p class="lede">1〜10 are the building blocks. Everything else is made by combining them.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="kana">いち</span><span class="romaji">ichi</span></td>
+            <td><span class="kana">に</span><span class="romaji">ni</span></td>
+            <td><span class="kana">さん</span><span class="romaji">san</span></td>
+            <td><span class="kana">よん</span><span class="romaji">yon</span></td>
+            <td><span class="kana">ご</span><span class="romaji">go</span></td>
+            <td><span class="kana">ろく</span><span class="romaji">roku</span></td>
+            <td><span class="kana">なな</span><span class="romaji">nana</span></td>
+            <td><span class="kana">はち</span><span class="romaji">hachi</span></td>
+            <td><span class="kana">きゅう</span><span class="romaji">kyuu</span></td>
+            <td><span class="kana">じゅう</span><span class="romaji">juu</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th><th>70</th><th>80</th><th>90</th><th>100</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="kana">にじゅう</span><span class="romaji">nijuu</span></td>
+            <td><span class="kana">さんじゅう</span><span class="romaji">sanjuu</span></td>
+            <td><span class="kana">よんじゅう</span><span class="romaji">yonjuu</span></td>
+            <td><span class="kana">ごじゅう</span><span class="romaji">gojuu</span></td>
+            <td><span class="kana">ろくじゅう</span><span class="romaji">rokujuu</span></td>
+            <td><span class="kana">ななじゅう</span><span class="romaji">nanajuu</span></td>
+            <td><span class="kana">はちじゅう</span><span class="romaji">hachijuu</span></td>
+            <td><span class="kana">きゅうじゅう</span><span class="romaji">kyuujuu</span></td>
+            <td><span class="kana">ひゃく</span><span class="romaji">hyaku</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <strong>How to combine them</strong>
+      <ul>
+        <li>11–19: じゅう + the digit — 11 = じゅういち, 15 = じゅうご</li>
+        <li>21–29 etc: the tens word + the digit — 21 = にじゅういち, 45 = よんじゅうご</li>
+        <li>4 and 7 usually use よん／なな in counting (not し／しち), to avoid confusion with 死(death)／質</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="kihon">
+    <h2>Basic Counters</h2>
+    <p class="lede">The five most common counters. Watch for the pronunciation changes in bold.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>つ<br>(generic)</th><th>こ<br>(small objects)</th><th>にん<br>(people)</th><th>ほん<br>(long, thin things)</th><th>まい<br>(flat, thin things)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>1</th><td><span class="kana">ひとつ</span><span class="romaji">hitotsu</span></td><td><span class="kana">いっこ</span><span class="romaji">ikko</span></td><td><span class="kana">ひとり</span><span class="romaji">hitori</span></td><td><span class="kana">いっぽん</span><span class="romaji">ippon</span></td><td><span class="kana">いちまい</span><span class="romaji">ichimai</span></td></tr>
+          <tr><th>2</th><td><span class="kana">ふたつ</span><span class="romaji">futatsu</span></td><td><span class="kana">にこ</span><span class="romaji">niko</span></td><td><span class="kana">ふたり</span><span class="romaji">futari</span></td><td><span class="kana">にほん</span><span class="romaji">nihon</span></td><td><span class="kana">にまい</span><span class="romaji">nimai</span></td></tr>
+          <tr><th>3</th><td><span class="kana">みっつ</span><span class="romaji">mittsu</span></td><td><span class="kana">さんこ</span><span class="romaji">sanko</span></td><td><span class="kana">さんにん</span><span class="romaji">sannin</span></td><td><span class="kana">さんぼん</span><span class="romaji">sanbon</span></td><td><span class="kana">さんまい</span><span class="romaji">sanmai</span></td></tr>
+          <tr><th>4</th><td><span class="kana">よっつ</span><span class="romaji">yottsu</span></td><td><span class="kana">よんこ</span><span class="romaji">yonko</span></td><td><span class="kana">よにん</span><span class="romaji">yonin</span></td><td><span class="kana">よんほん</span><span class="romaji">yonhon</span></td><td><span class="kana">よんまい</span><span class="romaji">yonmai</span></td></tr>
+          <tr><th>5</th><td><span class="kana">いつつ</span><span class="romaji">itsutsu</span></td><td><span class="kana">ごこ</span><span class="romaji">goko</span></td><td><span class="kana">ごにん</span><span class="romaji">gonin</span></td><td><span class="kana">ごほん</span><span class="romaji">gohon</span></td><td><span class="kana">ごまい</span><span class="romaji">gomai</span></td></tr>
+          <tr><th>6</th><td><span class="kana">むっつ</span><span class="romaji">muttsu</span></td><td><span class="kana">ろっこ</span><span class="romaji">rokko</span></td><td><span class="kana">ろくにん</span><span class="romaji">rokunin</span></td><td><span class="kana">ろっぽん</span><span class="romaji">roppon</span></td><td><span class="kana">ろくまい</span><span class="romaji">rokumai</span></td></tr>
+          <tr><th>7</th><td><span class="kana">ななつ</span><span class="romaji">nanatsu</span></td><td><span class="kana">ななこ</span><span class="romaji">nanako</span></td><td><span class="kana">しちにん<br>ななにん</span><span class="romaji">shichinin</span></td><td><span class="kana">ななほん</span><span class="romaji">nanahon</span></td><td><span class="kana">ななまい</span><span class="romaji">nanamai</span></td></tr>
+          <tr><th>8</th><td><span class="kana">やっつ</span><span class="romaji">yattsu</span></td><td><span class="kana">はっこ</span><span class="romaji">hakko</span></td><td><span class="kana">はちにん</span><span class="romaji">hachinin</span></td><td><span class="kana">はっぽん</span><span class="romaji">happon</span></td><td><span class="kana">はちまい</span><span class="romaji">hachimai</span></td></tr>
+          <tr><th>9</th><td><span class="kana">ここのつ</span><span class="romaji">kokonotsu</span></td><td><span class="kana">きゅうこ</span><span class="romaji">kyuuko</span></td><td><span class="kana">きゅうにん</span><span class="romaji">kyuunin</span></td><td><span class="kana">きゅうほん</span><span class="romaji">kyuuhon</span></td><td><span class="kana">きゅうまい</span><span class="romaji">kyuumai</span></td></tr>
+          <tr><th>10</th><td><span class="kana">とお</span><span class="romaji">too</span></td><td><span class="kana">じゅっこ</span><span class="romaji">jukko</span></td><td><span class="kana">じゅうにん</span><span class="romaji">juunin</span></td><td><span class="kana">じゅっぽん</span><span class="romaji">juppon</span></td><td><span class="kana">じゅうまい</span><span class="romaji">juumai</span></td></tr>
+          <tr><th>?<br>how many</th><td><span class="kana">いくつ</span><span class="romaji">ikutsu</span></td><td><span class="kana">なんこ</span><span class="romaji">nanko</span></td><td><span class="kana">なんにん</span><span class="romaji">nannin</span></td><td><span class="kana">なんぼん</span><span class="romaji">nanbon</span></td><td><span class="kana">なんまい</span><span class="romaji">nanmai</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <strong>Quick guide</strong>
+      <ul>
+        <li><strong>つ</strong>: a handy all-purpose counter — use this if you're not sure</li>
+        <li><strong>こ</strong>: small, roundish things like apples, bread, erasers</li>
+        <li><strong>にん</strong>: counting people. Only 1 and 2 have special readings</li>
+        <li><strong>ほん</strong>: long, thin things like pens, umbrellas, bottles, bananas</li>
+        <li><strong>まい</strong>: flat, thin things like paper, shirts, plates</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="sonota">
+    <h2>More Counters</h2>
+    <p class="lede">Four more that come up often in lessons.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>ひき<br>(small animals)</th><th>だい<br>(machines, vehicles)</th><th>さつ<br>(books)</th><th>はい<br>(cups/glasses)</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>1</th><td><span class="kana">いっぴき</span><span class="romaji">ippiki</span></td><td><span class="kana">いちだい</span><span class="romaji">ichidai</span></td><td><span class="kana">いっさつ</span><span class="romaji">issatsu</span></td><td><span class="kana">いっぱい</span><span class="romaji">ippai</span></td></tr>
+          <tr><th>2</th><td><span class="kana">にひき</span><span class="romaji">nihiki</span></td><td><span class="kana">にだい</span><span class="romaji">nidai</span></td><td><span class="kana">にさつ</span><span class="romaji">nisatsu</span></td><td><span class="kana">にはい</span><span class="romaji">nihai</span></td></tr>
+          <tr><th>3</th><td><span class="kana">さんびき</span><span class="romaji">sanbiki</span></td><td><span class="kana">さんだい</span><span class="romaji">sandai</span></td><td><span class="kana">さんさつ</span><span class="romaji">sansatsu</span></td><td><span class="kana">さんばい</span><span class="romaji">sanbai</span></td></tr>
+          <tr><th>…</th><td colspan="4">From 4 onward, it's yon/go/roku... + the counter, following mostly the same pattern as above</td></tr>
+          <tr><th>?</th><td><span class="kana">なんびき</span><span class="romaji">nanbiki</span></td><td><span class="kana">なんだい</span><span class="romaji">nandai</span></td><td><span class="kana">なんさつ</span><span class="romaji">nansatsu</span></td><td><span class="kana">なんばい</span><span class="romaji">nanbai</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <strong>Quick guide</strong>
+      <ul>
+        <li><strong>ひき</strong>: small-to-medium animals like cats, dogs, fish (large animals use とう instead)</li>
+        <li><strong>だい</strong>: cars, TVs, computers — machines and vehicles</li>
+        <li><strong>さつ</strong>: books, notebooks, magazines</li>
+        <li><strong>はい</strong>: coffee, water, sake — anything in a cup or glass</li>
+        <li><strong>かい</strong> is only for counting occurrences: いっかい (once), にかい (twice), さんかい (three times)…</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="group" id="reibun">
+    <h2>Examples</h2>
+    <div class="example">
+      <div class="jp">りんごが みっつ あります。</div>
+      <div class="rj">Ringo ga mittsu arimasu.</div>
+      <div class="en">There are three apples.</div>
+    </div>
+    <div class="example">
+      <div class="jp">ねこが にひき います。</div>
+      <div class="rj">Neko ga nihiki imasu.</div>
+      <div class="en">There are two cats.</div>
+    </div>
+    <div class="example">
+      <div class="jp">かぞくは よにんです。</div>
+      <div class="rj">Kazoku wa yonin desu.</div>
+      <div class="en">There are four people in my family.</div>
+    </div>
+    <div class="example">
+      <div class="jp">コーヒーを いっぱい ください。</div>
+      <div class="rj">Ko-hi- wo ippai kudasai.</div>
+      <div class="en">One coffee, please.</div>
+    </div>
+    <div class="note">
+      <strong>Usage tip</strong>
+      <p style="margin:0.4rem 0 0;">Don't try to memorize everything at once — start with what the student will actually use in conversation (a cup of coffee, family size) and build from there.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Sakura Bloom Japanese Lessons — Japanese Counters
+</footer>
+
+</body>
+</html>

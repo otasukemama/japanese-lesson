@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>シラバス（下書き） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#21201c; --paper:#efe7d8; --paper-light:#f7f2e6;
+    --indigo:#1f3a5f; --sakura:#c97a97; --sakura-soft:#f1dbe4; --gold:#b8924a;
+    --line: rgba(33,32,28,0.16);
+    font-family:'Zen Kaku Gothic New',-apple-system,sans-serif,'Hiragino Sans';
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *,*::before,*::after{box-sizing:inherit;}
+  html,body{height:100%;} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}}
+  :root[data-theme="dark"]{--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}
+  h1,h2,h3{font-family:'Shippori Mincho',serif;margin:0;}
+  header.hero{background:var(--indigo);color:var(--paper-light);padding:2.6rem 1.5rem;position:relative;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%);opacity:.35;}
+  .hero-inner{max-width:820px;margin:0 auto;position:relative;}
+  .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
+  .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
+  .hero h1{font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1.35;font-weight:700;}
+  .hero p.sub{margin-top:.8rem;font-size:.95rem;color:rgba(247,242,230,.78);max-width:56ch;line-height:1.7;}
+  main{max-width:820px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
+  section{margin-bottom:2.4rem;}
+  section h2{font-size:1.15rem;color:var(--indigo);margin-bottom:.6rem;}
+  @media (prefers-color-scheme: dark){section h2{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] section h2{color:var(--sakura-soft);}
+  .lede{font-size:.88rem;line-height:1.75;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.9rem;}
+  .phase{margin:1.6rem 0 .6rem;padding-bottom:.4rem;border-bottom:2px solid var(--gold);}
+  .phase h3{font-size:1.05rem;color:var(--indigo);}
+  @media (prefers-color-scheme: dark){.phase h3{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .phase h3{color:var(--sakura-soft);}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);margin-bottom:.5rem;}
+  table{border-collapse:collapse;width:100%;min-width:680px;font-size:.82rem;}
+  th,td{border:1px solid var(--line);padding:.5rem .55rem;text-align:left;vertical-align:top;}
+  thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.76rem;position:sticky;top:0;}
+  tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
+  .status{font-size:.72rem;font-weight:700;padding:.1rem .5rem;border-radius:999px;white-space:nowrap;}
+  .status.have{background:color-mix(in srgb, #4c7a4c 20%, var(--paper-light));color:#3c6a3c;}
+  .status.new{background:color-mix(in srgb, var(--sakura) 25%, var(--paper-light));color:#7a3f56;}
+  @media (prefers-color-scheme: dark){.status.have{color:#9fd39f;} .status.new{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .status.have{color:#9fd39f;} :root[data-theme="dark"] .status.new{color:var(--sakura-soft);}
+  .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
+  .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
+  @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
+  footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag">下書き</span></div>
+    <h1>シラバス（ユニット構成案）</h1>
+    <p class="sub">レベルチェックで開始ユニットを決め、あとは番号順に進めば自然と日常生活ができるようになる — という設計の叩き台です。既存の教材をどのユニットに当てはめるかも合わせて整理しています。</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>設計の考え方</h2>
+    <p class="lede">1ユニット＝1つの新しい文型＋関連する語彙、という単位で並べています。文型は少しずつ積み上がっていき、最終ユニットまで終える頃には「日常生活が最低限送れる」状態を目指します。レベルチェックはこのユニット番号のどこから始めるかを判定するためのものです。</p>
+  </section>
+
+  <section>
+    <div class="phase"><h3>フェーズA　あいさつ〜基本文型（ユニット1〜5）</h3></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>ユニット</th><th>新しい文型</th><th>例文</th><th>教材</th></tr></thead>
+        <tbody>
+          <tr><th>1</th><td>あいさつ</td><td>おはよう／こんにちは 等</td><td>おはようございます。</td><td>単語リスト(あいさつ)<span class="status have">既存</span></td></tr>
+          <tr><th>2</th><td>自己紹介</td><td>わたしは〜です</td><td>わたしはサナです。</td><td>会話レッスン「自己紹介」<span class="status have">既存</span></td></tr>
+          <tr><th>3</th><td>なに（What）</td><td>これは〜ですか／これは〜です</td><td>これはなんですか？→これはりんごです。</td><td>単語リスト(食べ物)+新規例文<span class="status new">要追加</span></td></tr>
+          <tr><th>4</th><td>どこ（Where）</td><td>〜はどこですか／〜はここです</td><td>トイレはどこですか？→ここです。</td><td>単語リスト(建物)+新規例文<span class="status new">要追加</span></td></tr>
+          <tr><th>5</th><td>だれ（Who）</td><td>〜はだれですか／〜さんです</td><td>あの人はだれですか？→田中さんです。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="phase"><h3>フェーズB　身のまわり・好み（ユニット6〜11）</h3></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>ユニット</th><th>新しい文型</th><th>例文</th><th>教材</th></tr></thead>
+        <tbody>
+          <tr><th>6</th><td>数字・年齢</td><td>〜さいです／数字の言い方</td><td>わたしは30さいです。</td><td>単語リスト(数字)<span class="status have">既存</span></td></tr>
+          <tr><th>7</th><td>好きな食べ物</td><td>〜が好きです</td><td>すしが好きです。</td><td>会話レッスン「好きな食べ物」<span class="status have">既存</span></td></tr>
+          <tr><th>8</th><td>趣味</td><td>〜をします／〜が好きです</td><td>よみょびに、テニスをします。</td><td>会話レッスン「趣味」<span class="status have">既存</span></td></tr>
+          <tr><th>9</th><td>家族</td><td>〜がいます／助数詞(人)</td><td>子どもが二人います。</td><td>会話レッスン「家族」＋数え方<span class="status have">既存</span></td></tr>
+          <tr><th>10</th><td>時間・一日の流れ</td><td>〜時に〜します</td><td>7時におきます。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+          <tr><th>11</th><td>週末の予定</td><td>〜します／〜するつもりです</td><td>週末は買い物をします。</td><td>会話レッスン「週末の予定」<span class="status have">既存</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="phase"><h3>フェーズC　外に出る・やりとりする（ユニット12〜18）</h3></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>ユニット</th><th>新しい文型</th><th>例文</th><th>教材</th></tr></thead>
+        <tbody>
+          <tr><th>12</th><td>天気・雑談</td><td>〜です／〜くなります</td><td>今日はあついですね。</td><td>会話レッスン「天気」<span class="status have">既存</span></td></tr>
+          <tr><th>13</th><td>道案内</td><td>まっすぐ／右・左／〜へ行きます</td><td>まっすぐ行って、右にまがります。</td><td>会話レッスン「道案内」<span class="status have">既存</span></td></tr>
+          <tr><th>14</th><td>カフェで注文</td><td>〜をください／〜がほしいです</td><td>コーヒーをください。</td><td>会話レッスン「カフェ」<span class="status have">既存</span></td></tr>
+          <tr><th>15</th><td>買い物</td><td>いくらですか／助数詞(値段)</td><td>これはいくらですか？</td><td>会話レッスン「買い物」＋数え方<span class="status have">既存</span></td></tr>
+          <tr><th>16</th><td>病院・薬局</td><td>〜がいたいです／症状の言い方</td><td>頭がいたいです。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+          <tr><th>17</th><td>郵便局・宅配便</td><td>〜を送りたいです</td><td>これをアメリカに送りたいです。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+          <tr><th>18</th><td>電話でのやりとり</td><td>〜たいんですが／予約の言い方</td><td>予約をしたいんですが。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="phase"><h3>フェーズD　移動・まとめ（ユニット19〜21）</h3></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>ユニット</th><th>新しい文型</th><th>例文</th><th>教材</th></tr></thead>
+        <tbody>
+          <tr><th>19</th><td>交通機関</td><td>〜で行きます／切符・IC カード</td><td>電車で行きます。</td><td>新規作成<span class="status new">要追加</span></td></tr>
+          <tr><th>20</th><td>読み書きの基礎固め</td><td>ひらがな・カタカナの総復習</td><td>—</td><td>ひらがな表・カタカナ表<span class="status have">既存</span></td></tr>
+          <tr><th>21</th><td>振り返り・まとめ</td><td>これまでの文型の総合練習</td><td>—</td><td>会話レッスン「振り返り」<span class="status have">既存</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><strong>この先（中級）</strong><p style="margin:.4rem 0 0;">ゴミ出し・近所付き合い、役所・銀行、緊急時などは、ユニット21を終えたあとの続編として別途設計する想定です。</p></div>
+  </section>
+
+  <section>
+    <h2>レベルチェックの設計イメージ</h2>
+    <p class="lede">1回のテストで「ユニット●番から開始」を判定できるよう、フェーズごとに1〜2問の代表的な設問を置くイメージです。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>チェック項目</th><th>見るポイント</th><th>結果の例</th></tr></thead>
+        <tbody>
+          <tr><td>ひらがな・カタカナが読めるか</td><td>読字の正確さ</td><td>読めない→ユニット1から</td></tr>
+          <tr><td>自己紹介ができるか</td><td>「わたしは〜です」が言えるか</td><td>言えない→ユニット2から</td></tr>
+          <tr><td>これは・どこ・だれの文が使えるか</td><td>基本疑問文の理解</td><td>使えない→ユニット3〜5から</td></tr>
+          <tr><td>好き・趣味・家族について話せるか</td><td>身近な話題の会話</td><td>話せる→ユニット12以降から</td></tr>
+          <tr><td>道案内・買い物・カフェの会話ができるか</td><td>実用会話の応用力</td><td>できる→ユニット16以降から</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>Sakura Bloom Japanese Lessons — シラバス（下書き）</footer>
+</body>
+</html>
