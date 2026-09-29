@@ -1,11 +1,7 @@
+Unit1 student · HTML
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Unit 1: Greetings（生徒用） | Sakura Bloom Japanese</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Unit 1: Greetings（生徒用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -25,7 +21,7 @@
   .hero-inner{max-width:780px;margin:0 auto;position:relative;}
   .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
   .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
-  .hero h1{font-size:clamp(1.6rem,4.2vw,2.1rem);line-height:1.35;font-weight:700;}
+  .hero h1{font-size:clamp(1.6rem,4.2vw,2.2rem);line-height:1.35;font-weight:700;}
   .hero p.sub{margin-top:.8rem;font-size:.92rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
   main{max-width:780px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
   section{margin-bottom:2.2rem;}
@@ -35,93 +31,65 @@
   .lede{font-size:.86rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.8rem;}
   .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;}
   .word-card{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;text-align:center;}
-  .word-card svg{width:34px;height:34px;}
   .word-card .emoji{font-size:1.9rem;line-height:1;}
   .word-card .jp{font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-top:.35rem;}
   .word-card .romaji{font-size:.74rem;color:var(--gold);margin-top:.15rem;}
-  .word-card .en{font-size:.8rem;margin-top:.25rem;font-weight:700;}
+  .word-card .en{font-size:.78rem;margin-top:.25rem;opacity:.8;}
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.85rem;}
+  th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top;}
+  thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.8rem;}
+  tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
   .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem;}
+  .drill .line{font-size:.95rem;line-height:1.9;}
+  .drill .line b{color:var(--indigo);}
+  @media (prefers-color-scheme: dark){.drill .line b{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .drill .line b{color:var(--sakura-soft);}
   .drill .who{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.04em;margin-bottom:.2rem;}
-  .drill .jp{font-size:1rem;}
-  .drill .rj{font-size:.8rem;color:var(--gold);}
-  .drill .en{font-size:.8rem;opacity:.8;}
   .drill .row{padding:.3rem 0;border-bottom:1px dashed var(--line);}
   .drill .row:last-child{border-bottom:none;}
+  .drill .rj{font-size:.78rem;color:var(--gold);}
+  .drill .en{font-size:.78rem;opacity:.75;}
   .blank{display:inline-block;border-bottom:2px dotted var(--gold);min-width:5em;text-align:center;}
+  .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
+  .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
+  @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
+  :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
   footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
-</style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
-    <h1>Unit 1: Greetings<br>ユニット1：あいさつ</h1>
-    <p class="sub">Goal: swap in different names until these 6 greetings come out naturally.</p>
-  </div>
-</header>
-
-<main>
-
-  <section>
-    <h2>Today's Words</h2>
-    <div class="word-grid">
-      <div class="word-card"><span class="emoji">🌅</span><div class="jp">おはよう<br>ございます</div><div class="romaji">ohayou gozaimasu</div><div class="en">Good morning</div></div>
-      <div class="word-card"><span class="emoji">☀️</span><div class="jp">こんにちは</div><div class="romaji">konnichiwa</div><div class="en">Hello (daytime)</div></div>
-      <div class="word-card"><span class="emoji">🌙</span><div class="jp">こんばんは</div><div class="romaji">konbanwa</div><div class="en">Good evening</div></div>
-      <div class="word-card"><span class="emoji">😴</span><div class="jp">おやすみ<br>なさい</div><div class="romaji">oyasumi nasai</div><div class="en">Good night</div></div>
-      <div class="word-card"><span class="emoji">🙏</span><div class="jp">ありがとう<br>ございます</div><div class="romaji">arigatou gozaimasu</div><div class="en">Thank you</div></div>
-      <div class="word-card"><span class="emoji">👋</span><div class="jp">さようなら</div><div class="romaji">sayounara</div><div class="en">Goodbye</div></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>A Note on "ございます"</h2>
-    <p class="lede">The ございます part makes a phrase more polite — used with people you don't know well, elders, or in shops (おはようございます, ありがとうございます). With your own kids or close family, it's natural to drop it and just say おはよう or ありがとう instead.</p>
-  </section>
-
-  <section>
-    <h2>Reading Practice</h2>
-    <p class="lede">Look at the hiragana chart and sound out each word above, letter by letter. Then read the whole word smoothly.</p>
-  </section>
-
-  <section>
-    <h2>Conversation Practice</h2>
-    <p class="lede">Practice each pattern with different names — your own, a family member's, a friend's. Say it many times until it feels natural.</p>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">おはようございます、<span class="blank">＿＿</span>さん。</div><div class="rj">Ohayou gozaimasu, ___ san.</div><div class="en">Good morning, [name].</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">おはようございます、<span class="blank">＿＿</span>さん。</div><div class="rj">Ohayou gozaimasu, ___ san.</div><div class="en">Good morning, [name].</div></div>
-    </div>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">こんにちは、<span class="blank">＿＿</span>さん。</div><div class="rj">Konnichiwa, ___ san.</div><div class="en">Hello, [name].</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">こんにちは、<span class="blank">＿＿</span>さん。</div><div class="rj">Konnichiwa, ___ san.</div><div class="en">Hello, [name].</div></div>
-    </div>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">こんばんは、<span class="blank">＿＿</span>さん。</div><div class="rj">Konbanwa, ___ san.</div><div class="en">Good evening, [name].</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">こんばんは、<span class="blank">＿＿</span>さん。</div><div class="rj">Konbanwa, ___ san.</div><div class="en">Good evening, [name].</div></div>
-    </div>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">おやすみなさい、<span class="blank">＿＿</span>さん。</div><div class="rj">Oyasumi nasai, ___ san.</div><div class="en">Good night, [name].</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">おやすみなさい、<span class="blank">＿＿</span>さん。</div><div class="rj">Oyasumi nasai, ___ san.</div><div class="en">Good night, [name].</div></div>
-    </div>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">ありがとうございます。</div><div class="rj">Arigatou gozaimasu.</div><div class="en">Thank you.</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">どういたしまして。</div><div class="rj">Dou itashimashite.</div><div class="en">You're welcome.</div></div>
-    </div>
-
-    <div class="drill">
-      <div class="row"><div class="who">A</div><div class="jp">さようなら、<span class="blank">＿＿</span>さん。</div><div class="rj">Sayounara, ___ san.</div><div class="en">Goodbye, [name].</div></div>
-      <div class="row"><div class="who">B</div><div class="jp">さようなら、<span class="blank">＿＿</span>さん。</div><div class="rj">Sayounara, ___ san.</div><div class="en">Goodbye, [name].</div></div>
-    </div>
-  </section>
-
-</main>
-
-<footer>Sakura Bloom Japanese Lessons — Unit 1 / Student Edition（下書き）</footer>
-</body>
-</html>
+.pointto{font-size:.72rem;margin-top:.35rem;color:var(--sakura);font-weight:700;} .kana{font-size:1.1rem;display:block;} .romaji-sm{font-size:.65rem;opacity:.7;} table td,table th{text-align:center;}
+:root{--tl:#1f3a5f;--s1:#b05f80;--s2:#9a7433;--s3:#1f3a5f;--s4:#3f7a6b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tl:#a9c1ea;--s3:#3d5f94}}
+:root[data-theme="dark"]{--tl:#a9c1ea;--s3:#3d5f94}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--indigo);padding:.55rem 1rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.topbar-in{max-width:780px;margin:0 auto}
+.back{display:inline-block;padding:.35rem 1rem;border-radius:999px;background:var(--sakura-soft);color:#16283f;text-decoration:none;font-weight:700;font-size:.85rem}
+section h2.plain{font-size:1.35rem;margin-bottom:.6rem}
+.step{display:flex;align-items:center;gap:.9rem;background:var(--sc);color:#fff;border-radius:12px;padding:.85rem 1.1rem;margin:0 0 .8rem}
+.step .n{font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;background:rgba(255,255,255,.25);padding:.2rem .85rem;border-radius:999px;white-space:nowrap}
+.step h2{color:#fff!important;font-size:1.3rem;line-height:1.3}
+.s1{--sc:var(--s1)}.s2{--sc:var(--s2)}.s3{--sc:var(--s3)}.s4{--sc:var(--s4)}
+.lede{font-size:.95rem}
+.nomem{display:inline-block;margin-left:.5rem;padding:.1rem .7rem;border-radius:999px;font-size:.72rem;font-weight:700;background:var(--sakura-soft);color:#16283f;vertical-align:middle;font-family:'Zen Kaku Gothic New',sans-serif}
+section h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--indigo);margin:1.6rem 0 .5rem}
+@media (prefers-color-scheme: dark){section h3{color:var(--sakura-soft)}}
+:root[data-theme="dark"] section h3{color:var(--sakura-soft)}
+.tonly{border-left:5px solid var(--tl);background:color-mix(in srgb,var(--tl) 12%,var(--paper-light));border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.9rem 0;font-size:.92rem;line-height:1.8}
+.tonly .lab{display:block;font-weight:700;color:var(--tl);font-size:.8rem;margin-bottom:.3rem}
+.tonly p{margin:.4rem 0}.tonly ol,.tonly ul{margin:.4rem 0;padding-left:1.3rem}
+table.plan{min-width:0}table.plan td,table.plan th{text-align:left}
+.summary{border:2px solid var(--sakura);border-radius:12px;background:var(--paper-light);padding:.4rem 1.3rem 1rem}
+.summary ul{list-style:none;padding:0;margin:.4rem 0}.summary li{padding:.35rem 0;font-size:1.02rem}.summary li:before{content:"● ";color:var(--sakura)}
+.sit{display:flex;gap:1rem;align-items:center;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin-bottom:.8rem}
+.sit .pic{flex:0 0 5.5rem;text-align:center;font-size:1.9rem;line-height:1.3}.sit .time{font-size:.78rem;font-weight:700;color:var(--gold)}
+.sit .sb{flex:1;min-width:0}.sit .sd{font-weight:700;margin-bottom:.3rem;font-size:.95rem}
+.sl{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .6rem;padding:.25rem 0;border-bottom:1px dashed var(--line)}.sl:last-child{border-bottom:0}
+.sl .w{font-size:.72rem;font-weight:700;color:var(--gold);min-width:3.8rem}.sl .j{font-size:1.1rem}.sl .r{font-size:.78rem;color:var(--gold)}.sl .e{font-size:.78rem;opacity:.75}
+</style></head><body>
+<div class="topbar"><div class="topbar-in"><a class="back" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></div></div>
+<header class="hero"><div class="hero-inner"><div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
+<h1>Unit 1: Greetings<br>ユニット1：あいさつ</h1>
+<p class="sub">Goal: say the right greeting for each time of day and each person.</p></div></header><main>
+<section><div class="step s1"><span class="n">STEP 1</span><h2>Learn today's words</h2></div><p class="lede">Listen to your teacher, then repeat each greeting out loud.</p><div class="word-grid"><div class="word-card"><div class="emoji">🌅</div><div class="jp">おはよう<br>ございます</div><div class="romaji">ohayou gozaimasu</div><div class="en">Good morning</div></div><div class="word-card"><div class="emoji">☀️</div><div class="jp">こんにちは</div><div class="romaji">konnichiwa</div><div class="en">Hello (daytime)</div></div><div class="word-card"><div class="emoji">🌙</div><div class="jp">こんばんは</div><div class="romaji">konbanwa</div><div class="en">Good evening</div></div><div class="word-card"><div class="emoji">😴</div><div class="jp">おやすみ<br>なさい</div><div class="romaji">oyasumi nasai</div><div class="en">Good night</div></div><div class="word-card"><div class="emoji">🙏</div><div class="jp">ありがとう<br>ございます</div><div class="romaji">arigatou gozaimasu</div><div class="en">Thank you</div></div><div class="word-card"><div class="emoji">👋</div><div class="jp">さようなら</div><div class="romaji">sayounara</div><div class="en">Goodbye</div></div></div></section><section><div class="step s2"><span class="n">STEP 2</span><h2>Polite and casual: "ございます"</h2></div><p class="lede">The ございます part makes a phrase more polite — used with people you don't know well, elders, or in shops (おはようございます, ありがとうございます). With your own kids or close family, it's natural to drop it and just say おはよう or ありがとう instead.</p><div class="table-wrap"><table><thead><tr><th></th><th>Polite (with ございます)</th><th>Casual (without)</th></tr></thead><tbody>
+<tr><th>Use with</th><td>People you don't know well, elders, shops</td><td>Your own kids, close family</td></tr>
+<tr><th>Good morning</th><td><span class="kana">おはようございます</span></td><td><span class="kana">おはよう</span></td></tr>
+<tr><th>Thank you</th><td><span class="kana">ありがとうございます</span></td><td><span class="kana">ありがとう</span></td></tr></tbody></table></div></section><section><div class="step s3"><span class="n">STEP 3</span><h2>Reading practice</h2></div><p class="lede">Look at the hiragana chart and sound out each word above, letter by letter. Then read the whole word smoothly.</p></section><section><div class="step s4"><span class="n">STEP 4</span><h2>Conversation practice: what do you say?</h2></div><p class="lede">Look at each picture. What time is it, and who are you talking to? Say the right greeting out loud — then your teacher answers. Repeat until it feels natural.</p><div class="sit"><div class="pic"><div>🕘👩‍🏫</div><div class="time">9:00 AM</div></div><div class="sb"><div class="sd">You meet your teacher in the morning.</div><div class="sl"><span class="w">You</span><span class="j">おはようございます。</span><span class="r">Ohayou gozaimasu.</span><span class="e">Good morning.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">おはようございます。</span><span class="r">Ohayou gozaimasu.</span></div></div></div><div class="sit"><div class="pic"><div>🕛👩‍🏫</div><div class="time">12:00 PM</div></div><div class="sb"><div class="sd">You meet your teacher at noon.</div><div class="sl"><span class="w">You</span><span class="j">こんにちは。</span><span class="r">Konnichiwa.</span><span class="e">Hello.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">こんにちは。</span><span class="r">Konnichiwa.</span></div></div></div><div class="sit"><div class="pic"><div>🕖👩‍🏫</div><div class="time">7:00 PM</div></div><div class="sb"><div class="sd">You meet your teacher in the evening.</div><div class="sl"><span class="w">You</span><span class="j">こんばんは。</span><span class="r">Konbanwa.</span><span class="e">Good evening.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">こんばんは。</span><span class="r">Konbanwa.</span></div></div></div><div class="sit"><div class="pic"><div>🕖🧒</div><div class="time">7:00 AM</div></div><div class="sb"><div class="sd">Your child wakes up. (Casual — no ございます!)</div><div class="sl"><span class="w">You</span><span class="j">おはよう。</span><span class="r">Ohayou.</span><span class="e">Good morning.</span></div><div class="sl"><span class="w">Child</span><span class="j">おはよう。</span><span class="r">Ohayou.</span></div></div></div><div class="sit"><div class="pic"><div>🕙🧒</div><div class="time">10:00 PM</div></div><div class="sb"><div class="sd">Bedtime. You say good night to your child.</div><div class="sl"><span class="w">You</span><span class="j">おやすみなさい。</span><span class="r">Oyasumi nasai.</span><span class="e">Good night.</span></div><div class="sl"><span class="w">Child</span><span class="j">おやすみなさい。</span><span class="r">Oyasumi nasai.</span></div></div></div><div class="sit"><div class="pic"><div>🎁🙏</div></div><div class="sb"><div class="sd">A friend gives you a gift.</div><div class="sl"><span class="w">You</span><span class="j">ありがとうございます。</span><span class="r">Arigatou gozaimasu.</span><span class="e">Thank you.</span></div><div class="sl"><span class="w">Friend</span><span class="j">どういたしまして。</span><span class="r">Dou itashimashite.</span><span class="e">You're welcome.</span></div></div></div><div class="sit"><div class="pic"><div>👋👩‍🏫</div></div><div class="sb"><div class="sd">The lesson is over. Time to go.</div><div class="sl"><span class="w">You</span><span class="j">さようなら。</span><span class="r">Sayounara.</span><span class="e">Goodbye.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">さようなら。</span><span class="r">Sayounara.</span></div></div></div></section><section><div class="summary"><h2 class="plain">Unit 1 Summary（ユニット1のまとめ）</h2><ul><li>I can say the 6 greetings.</li><li>I can read the greetings using the hiragana chart.</li><li>I can choose the right greeting for the time of day and the person.</li><li>I know the difference between polite and casual (ございます).</li></ul></div></section><p style="text-align:center"><a class="back" style="background:var(--indigo);color:#fff" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></p></main><footer>Sakura Bloom Japanese Lessons — Unit 1 / Student Edition</footer></body></html>
