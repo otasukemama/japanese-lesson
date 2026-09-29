@@ -1,11 +1,7 @@
+Unit1 teacher · HTML
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ユニット1：あいさつ（講師用） | Sakura Bloom Japanese</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>ユニット1：あいさつ（講師用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -19,120 +15,81 @@
   html,body{height:100%;} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
   @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}}
   :root[data-theme="dark"]{--paper:#1b1815;--paper-light:#24211c;--ink:#eee7d8;--line:rgba(238,231,216,0.16);}
-  h1,h2,h3{font-family:'Shippori Mincho',serif;margin:0;}
+  h1,h2{font-family:'Shippori Mincho',serif;margin:0;}
   header.hero{background:var(--indigo);color:var(--paper-light);padding:2.6rem 1.5rem;position:relative;overflow:hidden;}
   header.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 35%, var(--sakura) 0%, transparent 70%);opacity:.35;}
   .hero-inner{max-width:780px;margin:0 auto;position:relative;}
   .brand{font-size:.8rem;letter-spacing:.06em;color:var(--sakura-soft);margin-bottom:1rem;}
   .draft-tag{display:inline-block;background:var(--sakura);color:#16283f;font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;margin-left:.6rem;vertical-align:middle;}
-  .hero h1{font-size:clamp(1.7rem,4.5vw,2.3rem);line-height:1.35;font-weight:700;}
-  .hero p.sub{margin-top:.8rem;font-size:.95rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
+  .hero h1{font-size:clamp(1.6rem,4.2vw,2.2rem);line-height:1.35;font-weight:700;}
+  .hero p.sub{margin-top:.8rem;font-size:.92rem;color:rgba(247,242,230,.78);max-width:52ch;line-height:1.7;}
   main{max-width:780px;margin:0 auto;padding:2.4rem 1.2rem 4.5rem;}
-  section{margin-bottom:2.4rem;}
-  section h2{font-size:1.15rem;color:var(--indigo);margin-bottom:.5rem;}
+  section{margin-bottom:2.2rem;}
+  section h2{font-size:1.1rem;color:var(--indigo);margin-bottom:.5rem;}
   @media (prefers-color-scheme: dark){section h2{color:var(--sakura-soft);}}
   :root[data-theme="dark"] section h2{color:var(--sakura-soft);}
-  .lede{font-size:.88rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.9rem;}
+  .lede{font-size:.86rem;line-height:1.7;color:color-mix(in srgb, var(--ink) 68%, transparent);margin-bottom:.8rem;}
   .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;}
   .word-card{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;text-align:center;}
-  .word-card svg{width:34px;height:34px;}
   .word-card .emoji{font-size:1.9rem;line-height:1;}
   .word-card .jp{font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-top:.35rem;}
   .word-card .romaji{font-size:.74rem;color:var(--gold);margin-top:.15rem;}
   .word-card .en{font-size:.78rem;margin-top:.25rem;opacity:.8;}
-  .drill .line .rj{font-size:.78rem;color:var(--gold);}
-  .drill .line .en{font-size:.78rem;opacity:.75;}
   .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--paper-light);}
-  table{border-collapse:collapse;width:100%;min-width:520px;font-size:.85rem;}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.85rem;}
   th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top;}
   thead th{background:var(--indigo);color:var(--paper-light);font-weight:500;font-size:.8rem;}
   tbody th{background:color-mix(in srgb, var(--indigo) 10%, var(--paper-light));font-weight:700;white-space:nowrap;}
-  .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.8rem;}
-  .drill .line{font-size:.95rem;line-height:2;}
+  .drill{background:var(--paper-light);border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem;}
+  .drill .line{font-size:.95rem;line-height:1.9;}
   .drill .line b{color:var(--indigo);}
   @media (prefers-color-scheme: dark){.drill .line b{color:var(--sakura-soft);}}
   :root[data-theme="dark"] .drill .line b{color:var(--sakura-soft);}
+  .drill .who{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.04em;margin-bottom:.2rem;}
+  .drill .row{padding:.3rem 0;border-bottom:1px dashed var(--line);}
+  .drill .row:last-child{border-bottom:none;}
+  .drill .rj{font-size:.78rem;color:var(--gold);}
+  .drill .en{font-size:.78rem;opacity:.75;}
   .blank{display:inline-block;border-bottom:2px dotted var(--gold);min-width:5em;text-align:center;}
   .note{margin-top:1rem;border:1px dashed var(--gold);background:color-mix(in srgb, var(--gold) 8%, var(--paper-light));border-radius:8px;padding:1rem 1.2rem;font-size:.88rem;line-height:1.7;}
   .note strong{font-family:'Shippori Mincho',serif;color:var(--indigo);font-weight:700;}
   @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
   :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
   footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
-</style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--indigo);color:#fff;">TEACHER</span></div>
-    <h1>ユニット1：あいさつ（講師用）</h1>
-    <p class="sub">今日のゴール：名前を入れ替えながら、6つのあいさつ言葉が自然に出てくるようになる。書く練習はまだしません。</p>
-  </div>
-</header>
-
-<main>
-
-  <section>
-    <h2>今日の単語（6つ）</h2>
-    <div class="word-grid">
-      <div class="word-card"><span class="emoji">🌅</span><div class="jp">おはよう<br>ございます</div><div class="romaji">ohayou gozaimasu</div><div class="en">Good morning</div></div>
-      <div class="word-card"><span class="emoji">☀️</span><div class="jp">こんにちは</div><div class="romaji">konnichiwa</div><div class="en">Hello (daytime)</div></div>
-      <div class="word-card"><span class="emoji">🌙</span><div class="jp">こんばんは</div><div class="romaji">konbanwa</div><div class="en">Good evening</div></div>
-      <div class="word-card"><span class="emoji">😴</span><div class="jp">おやすみ<br>なさい</div><div class="romaji">oyasumi nasai</div><div class="en">Good night</div></div>
-      <div class="word-card"><span class="emoji">🙏</span><div class="jp">ありがとう<br>ございます</div><div class="romaji">arigatou gozaimasu</div><div class="en">Thank you</div></div>
-      <div class="word-card"><span class="emoji">👋</span><div class="jp">さようなら</div><div class="romaji">sayounara</div><div class="en">Goodbye</div></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>使い分けのポイント：「ございます」</h2>
-    <p class="lede">「ございます」は丁寧な言い方につける部分です。目上の人・初対面の人・お店などでは「おはようございます」「ありがとうございます」のようにつけますが、自分の子どもや親しい家族に言うときは「ございます」を外して「おはよう」「ありがとう」とカジュアルに言うのが自然です。相手との距離感に合わせて使い分けることを、簡単に伝えておきましょう。</p>
-  </section>
-
-  <section>
-    <h2>読む練習（3〜5分）</h2>
-    <p class="lede">ひらがな表を見ながら、上の6語を1文字ずつ声に出して読みます。読めたら、単語全体をもう一度ゆっくり読みます。</p>
-  </section>
-
-  <section>
-    <h2>会話ドリル（くり返し練習・10〜15分）</h2>
-    <p class="lede">同じパターンを、相手の名前だけ変えながら何度もくり返します。最初はゆっくり、慣れてきたら少しずつ速く。5〜6人分の名前で言えるようになったら合格の目安です。</p>
-
-    <div class="drill">
-      <div class="line"><b>基本パターン</b></div>
-      <div class="line">先生：こんにちは、<span class="blank">（生徒の名前）</span>さん。<br><span class="rj">Konnichiwa, ___ san.</span> <span class="en">Hello, [name].</span></div>
-      <div class="line">生徒：こんにちは、<span class="blank">（先生の名前）</span>さん。<br><span class="rj">Konnichiwa, ___ san.</span> <span class="en">Hello, [name].</span></div>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>ラウンド</th><th>入れ替える名前の例</th><th>ねらい</th></tr></thead>
-        <tbody>
-          <tr><th>1</th><td>先生 ⇄ 生徒（本人の名前）</td><td>まずは自分の名前で慣れる</td></tr>
-          <tr><th>2</th><td>生徒の家族の名前（夫・子ども）</td><td>身近な名前に応用する</td></tr>
-          <tr><th>3</th><td>時間を変えて：おはよう／こんばんは／おやすみなさい</td><td>朝・昼・夜の使い分けを体で覚える</td></tr>
-          <tr><th>4</th><td>別れ際に「さようなら」を追加</td><td>あいさつの往復を1セットにする</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="drill">
-      <div class="line"><b>お礼のミニパターン</b></div>
-      <div class="line">生徒：ありがとうございます。<br><span class="rj">Arigatou gozaimasu.</span> <span class="en">Thank you.</span></div>
-      <div class="line">先生：どういたしまして。<br><span class="rj">Dou itashimashite.</span> <span class="en">You're welcome.</span></div>
-      <div class="line" style="opacity:.75;font-size:.8rem;margin-top:.3rem;">※「どういたしまして」は今回は聞かせるだけでOK。単語リストには含めません。</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>まとめ（3分）</h2>
-    <p class="lede">最後にもう一度、6語をノーヒントで読み上げます。全部言えたら、今日はそれで十分です。</p>
-  </section>
-
-  <div class="note"><strong>講師メモ</strong><p style="margin:.4rem 0 0;">言えるかどうかより「くり返して口が慣れたか」を大事にしてください。間違えても直接指摘せず、正しい形をもう一度聞かせて言い直してもらう程度で十分です。</p></div>
-
-</main>
-
-<footer>Sakura Bloom Japanese Lessons — ユニット1・講師用（下書き）</footer>
-</body>
-</html>
+.pointto{font-size:.72rem;margin-top:.35rem;color:var(--sakura);font-weight:700;} .kana{font-size:1.1rem;display:block;} .romaji-sm{font-size:.65rem;opacity:.7;} table td,table th{text-align:center;}
+:root{--tl:#1f3a5f;--s1:#b05f80;--s2:#9a7433;--s3:#1f3a5f;--s4:#3f7a6b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tl:#a9c1ea;--s3:#3d5f94}}
+:root[data-theme="dark"]{--tl:#a9c1ea;--s3:#3d5f94}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--indigo);padding:.55rem 1rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.topbar-in{max-width:780px;margin:0 auto}
+.back{display:inline-block;padding:.35rem 1rem;border-radius:999px;background:var(--sakura-soft);color:#16283f;text-decoration:none;font-weight:700;font-size:.85rem}
+section h2.plain{font-size:1.35rem;margin-bottom:.6rem}
+.step{display:flex;align-items:center;gap:.9rem;background:var(--sc);color:#fff;border-radius:12px;padding:.85rem 1.1rem;margin:0 0 .8rem}
+.step .n{font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;background:rgba(255,255,255,.25);padding:.2rem .85rem;border-radius:999px;white-space:nowrap}
+.step h2{color:#fff!important;font-size:1.3rem;line-height:1.3}
+.s1{--sc:var(--s1)}.s2{--sc:var(--s2)}.s3{--sc:var(--s3)}.s4{--sc:var(--s4)}
+.lede{font-size:.95rem}
+.nomem{display:inline-block;margin-left:.5rem;padding:.1rem .7rem;border-radius:999px;font-size:.72rem;font-weight:700;background:var(--sakura-soft);color:#16283f;vertical-align:middle;font-family:'Zen Kaku Gothic New',sans-serif}
+section h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--indigo);margin:1.6rem 0 .5rem}
+@media (prefers-color-scheme: dark){section h3{color:var(--sakura-soft)}}
+:root[data-theme="dark"] section h3{color:var(--sakura-soft)}
+.tonly{border-left:5px solid var(--tl);background:color-mix(in srgb,var(--tl) 12%,var(--paper-light));border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.9rem 0;font-size:.92rem;line-height:1.8}
+.tonly .lab{display:block;font-weight:700;color:var(--tl);font-size:.8rem;margin-bottom:.3rem}
+.tonly p{margin:.4rem 0}.tonly ol,.tonly ul{margin:.4rem 0;padding-left:1.3rem}
+table.plan{min-width:0}table.plan td,table.plan th{text-align:left}
+.summary{border:2px solid var(--sakura);border-radius:12px;background:var(--paper-light);padding:.4rem 1.3rem 1rem}
+.summary ul{list-style:none;padding:0;margin:.4rem 0}.summary li{padding:.35rem 0;font-size:1.02rem}.summary li:before{content:"● ";color:var(--sakura)}
+.sit{display:flex;gap:1rem;align-items:center;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin-bottom:.8rem}
+.sit .pic{flex:0 0 5.5rem;text-align:center;font-size:1.9rem;line-height:1.3}.sit .time{font-size:.78rem;font-weight:700;color:var(--gold)}
+.sit .sb{flex:1;min-width:0}.sit .sd{font-weight:700;margin-bottom:.3rem;font-size:.95rem}
+.sl{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .6rem;padding:.25rem 0;border-bottom:1px dashed var(--line)}.sl:last-child{border-bottom:0}
+.sl .w{font-size:.72rem;font-weight:700;color:var(--gold);min-width:3.8rem}.sl .j{font-size:1.1rem}.sl .r{font-size:.78rem;color:var(--gold)}.sl .e{font-size:.78rem;opacity:.75}
+</style></head><body>
+<div class="topbar"><div class="topbar-in"><a class="back" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></div></div>
+<header class="hero"><div class="hero-inner"><div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--indigo);color:#fff;">TEACHER</span></div>
+<h1>Unit 1: Greetings<br>ユニット1：あいさつ（講師用）</h1>
+<p class="sub">Goal: say the right greeting for each time of day and each person.</p></div></header><main>
+<section><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p>青い枠は講師専用の説明です（生徒用テキストにはありません）。それ以外は生徒用と同じ内容です。生徒の言語が話せなくても進められるよう、進め方と先生のことばを書いています。</p><p><b>先生のことば：</b>「まねしてください」「もういちど」「じょうずです」「いいですね」「つぎ、いきます」／身ぶり：耳に手を当てる＝聞いて、生徒を指す＝どうぞ</p><p><b>今日のゴール：</b>時間帯や相手に合わせて、6つのあいさつ言葉が自然に出てくるようになること。</p><p><b>50分レッスンの配分例</b></p><div class="table-wrap"><table class="plan"><tbody><tr><th>オープニング（あいさつ・ユニット0の五十音を軽く復習）</th><td>3分</td></tr><tr><th>ステップ1　今日の単語を聞いてリピート</th><td>10分</td></tr><tr><th>ステップ2　ていねい／カジュアルの使い分け</th><td>5分</td></tr><tr><th>ステップ3　読む練習</th><td>7分</td></tr><tr><th>ステップ4　場面で会話練習</th><td>15分</td></tr><tr><th>質問・ふりかえり・予備</th><td>5分</td></tr><tr><th>まとめ・次回の案内</th><td>5分</td></tr></tbody></table></div></div></section><section><div class="step s1"><span class="n">STEP 1</span><h2>Learn today's words</h2></div><p class="lede">Listen to your teacher, then repeat each greeting out loud.</p><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p><b>目安：約10分</b></p><ol><li>カードの絵を指しながら、先生が1語ずつ、ゆっくり読みます。</li><li>生徒にリピートしてもらいます（「まねしてください」）。</li><li>6語を順番に、2周くり返します。</li><li>先生がランダムに絵を指し、生徒に言ってもらいます。</li></ol><p><b>意味の伝え方：</b>意味は絵と英語表記で確認できます。朝・昼・夜は身ぶり（太陽・月・眠る）、「ありがとう」は軽いお辞儀、「さようなら」は手をふる、で伝えると分かりやすいです。</p></div><div class="word-grid"><div class="word-card"><div class="emoji">🌅</div><div class="jp">おはよう<br>ございます</div><div class="romaji">ohayou gozaimasu</div><div class="en">Good morning</div></div><div class="word-card"><div class="emoji">☀️</div><div class="jp">こんにちは</div><div class="romaji">konnichiwa</div><div class="en">Hello (daytime)</div></div><div class="word-card"><div class="emoji">🌙</div><div class="jp">こんばんは</div><div class="romaji">konbanwa</div><div class="en">Good evening</div></div><div class="word-card"><div class="emoji">😴</div><div class="jp">おやすみ<br>なさい</div><div class="romaji">oyasumi nasai</div><div class="en">Good night</div></div><div class="word-card"><div class="emoji">🙏</div><div class="jp">ありがとう<br>ございます</div><div class="romaji">arigatou gozaimasu</div><div class="en">Thank you</div></div><div class="word-card"><div class="emoji">👋</div><div class="jp">さようなら</div><div class="romaji">sayounara</div><div class="en">Goodbye</div></div></div></section><section><div class="step s2"><span class="n">STEP 2</span><h2>Polite and casual: "ございます"</h2></div><p class="lede">The ございます part makes a phrase more polite — used with people you don't know well, elders, or in shops (おはようございます, ありがとうございます). With your own kids or close family, it's natural to drop it and just say おはよう or ありがとう instead.</p><div class="table-wrap"><table><thead><tr><th></th><th>Polite (with ございます)</th><th>Casual (without)</th></tr></thead><tbody>
+<tr><th>Use with</th><td>People you don't know well, elders, shops</td><td>Your own kids, close family</td></tr>
+<tr><th>Good morning</th><td><span class="kana">おはようございます</span></td><td><span class="kana">おはよう</span></td></tr>
+<tr><th>Thank you</th><td><span class="kana">ありがとうございます</span></td><td><span class="kana">ありがとう</span></td></tr></tbody></table></div><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p><b>目安：約5分</b></p><p><b>日本語訳：</b>「ございます」は丁寧な言い方につける部分です。目上の人・初対面の人・お店などでは「おはようございます」「ありがとうございます」のようにつけます。自分の子どもや親しい家族には「ございます」を外して「おはよう」「ありがとう」とカジュアルに言うのが自然です。</p><p><b>進め方：</b></p><ol><li>生徒が英文と表を読む間、先生は表の「ございます」あり／なしを指して見せます。</li><li>先生が「おはようございます」→「おはよう」と続けて言い、違いを聞かせます。</li><li>「ありがとうございます」→「ありがとう」も同じようにします。</li><li>生徒にも、両方言ってもらいます（「まねしてください」）。</li></ol><p>覚える必要はありません。「距離感で言い方が変わる」と知ってもらえれば十分です。</p></div></section><section><div class="step s3"><span class="n">STEP 3</span><h2>Reading practice</h2></div><p class="lede">Look at the hiragana chart and sound out each word above, letter by letter. Then read the whole word smoothly.</p><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p><b>目安：約7分</b></p><ol><li>ひらがな表（ユニット0の五十音表）を開き、生徒に見てもらいます。</li><li>単語を1つ選び、先生が表を指しながら1文字ずつ読みます。</li><li>生徒が同じ単語を、表を指しながら1文字ずつ読みます。</li><li>最後に、単語全体を自然に読んでもらいます。</li><li>6語すべて、同じ流れで進めます。</li></ol></div></section><section><div class="step s4"><span class="n">STEP 4</span><h2>Conversation practice: what do you say?</h2></div><p class="lede">Look at each picture. What time is it, and who are you talking to? Say the right greeting out loud — then your teacher answers. Repeat until it feels natural.</p><div class="sit"><div class="pic"><div>🕘👩‍🏫</div><div class="time">9:00 AM</div></div><div class="sb"><div class="sd">You meet your teacher in the morning.</div><div class="sl"><span class="w">You</span><span class="j">おはようございます。</span><span class="r">Ohayou gozaimasu.</span><span class="e">Good morning.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">おはようございます。</span><span class="r">Ohayou gozaimasu.</span></div></div></div><div class="sit"><div class="pic"><div>🕛👩‍🏫</div><div class="time">12:00 PM</div></div><div class="sb"><div class="sd">You meet your teacher at noon.</div><div class="sl"><span class="w">You</span><span class="j">こんにちは。</span><span class="r">Konnichiwa.</span><span class="e">Hello.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">こんにちは。</span><span class="r">Konnichiwa.</span></div></div></div><div class="sit"><div class="pic"><div>🕖👩‍🏫</div><div class="time">7:00 PM</div></div><div class="sb"><div class="sd">You meet your teacher in the evening.</div><div class="sl"><span class="w">You</span><span class="j">こんばんは。</span><span class="r">Konbanwa.</span><span class="e">Good evening.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">こんばんは。</span><span class="r">Konbanwa.</span></div></div></div><div class="sit"><div class="pic"><div>🕖🧒</div><div class="time">7:00 AM</div></div><div class="sb"><div class="sd">Your child wakes up. (Casual — no ございます!)</div><div class="sl"><span class="w">You</span><span class="j">おはよう。</span><span class="r">Ohayou.</span><span class="e">Good morning.</span></div><div class="sl"><span class="w">Child</span><span class="j">おはよう。</span><span class="r">Ohayou.</span></div></div></div><div class="sit"><div class="pic"><div>🕙🧒</div><div class="time">10:00 PM</div></div><div class="sb"><div class="sd">Bedtime. You say good night to your child.</div><div class="sl"><span class="w">You</span><span class="j">おやすみなさい。</span><span class="r">Oyasumi nasai.</span><span class="e">Good night.</span></div><div class="sl"><span class="w">Child</span><span class="j">おやすみなさい。</span><span class="r">Oyasumi nasai.</span></div></div></div><div class="sit"><div class="pic"><div>🎁🙏</div></div><div class="sb"><div class="sd">A friend gives you a gift.</div><div class="sl"><span class="w">You</span><span class="j">ありがとうございます。</span><span class="r">Arigatou gozaimasu.</span><span class="e">Thank you.</span></div><div class="sl"><span class="w">Friend</span><span class="j">どういたしまして。</span><span class="r">Dou itashimashite.</span><span class="e">You're welcome.</span></div></div></div><div class="sit"><div class="pic"><div>👋👩‍🏫</div></div><div class="sb"><div class="sd">The lesson is over. Time to go.</div><div class="sl"><span class="w">You</span><span class="j">さようなら。</span><span class="r">Sayounara.</span><span class="e">Goodbye.</span></div><div class="sl"><span class="w">Teacher</span><span class="j">さようなら。</span><span class="r">Sayounara.</span></div></div></div><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p><b>目安：約15分</b></p><p><b>進め方：</b></p><ol><li>絵カードを1枚ずつ指して、状況を伝えます。生徒は英語の状況文と絵（時計・人）で場面が分かります。</li><li>生徒が「You」のセリフを言います。</li><li>先生が相手役として、同じあいさつを返します（先生・子ども・友だちの役）。</li><li>7枚を順番に進め、2周くり返します。</li><li>役割を交代します（先生が「You」、生徒が相手役）。</li></ol><p><b>場面の使い方（ラウンド）</b></p><div class="table-wrap"><table class="plan"><thead><tr><th>ラウンド</th><th>やり方</th><th>ねらい</th></tr></thead><tbody><tr><th>1</th><td>カードを1→7の順に進める</td><td>場面と言葉を結びつける</td></tr><tr><th>2</th><td>先生がランダムにカードを指す</td><td>とっさに言えるようにする</td></tr><tr><th>3</th><td>絵を使わず、時計や身ぶりだけで場面を出す（朝＝のびをする、昼＝太陽、夜＝眠る）</td><td>絵がなくても言えるようにする</td></tr><tr><th>4</th><td>生徒が自分の生活の場面を考える（朝、子どもに会った／夜、夫に会った など）</td><td>自分のこととして使う</td></tr></tbody></table></div><p><b>ポイント：</b>カード4は、STEP 2で学んだ「ございます」なしのカジュアルな言い方の復習です。先生は先生役のときは「ございます」あり、子ども役のときはなしで言い分けてください。「どういたしまして」は今回は聞かせるだけでOKです（単語リストには含めません）。</p></div></section><section><div class="summary"><h2 class="plain">Unit 1 Summary（ユニット1のまとめ）</h2><ul><li>I can say the 6 greetings.</li><li>I can read the greetings using the hiragana chart.</li><li>I can choose the right greeting for the time of day and the person.</li><li>I know the difference between polite and casual (ございます).</li></ul></div><div class="tonly"><span class="lab">👩‍🏫 講師用（生徒用テキストにはありません）</span><p><b>日本語訳：</b>6つのあいさつが言えるようになった／ひらがな表を見ながらあいさつを読めるようになった／時間帯や相手に合わせてあいさつを選んで言えるようになった／ていねい（ございます）とカジュアルの違いが分かった</p><p><b>進め方（約5分）：</b>最後にもう一度、6語をノーヒントで言ってもらいます。全部言えたら、今日はそれで十分です。生徒と一緒に4つの項目を読み、「じょうずです」と伝えて終わります。</p><p><b>講師メモ：</b>言えるかどうかより「くり返して口が慣れたか」を大事にしてください。間違えても直接指摘せず、正しい形をもう一度聞かせて言い直してもらう程度で十分です。</p></div></section><p style="text-align:center"><a class="back" style="background:var(--indigo);color:#fff" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></p></main><footer>Sakura Bloom Japanese Lessons — Unit 1 / 講師用</footer></body></html>
