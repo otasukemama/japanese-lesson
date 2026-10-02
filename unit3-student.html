@@ -1,11 +1,7 @@
+Unit3 student · HTML
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Unit 3: What（生徒用） | Sakura Bloom Japanese</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Unit 3: What is this?（生徒用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -60,34 +56,55 @@
   @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
   :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
   footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
-</style>
-</head>
-<body>
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
-    <h1>Unit 3: What is this?<br>ユニット3：なに</h1>
-    <p class="sub">Goal: ask and answer "What is this?" / "What is that?" / "What is it?" with different words.</p>
-  </div>
-</header>
-<main>
-
-  <section><h2>Today's Words</h2><div class="word-grid"><div class="word-card"><span class="emoji">✏️</span><div class="jp">ペン</div><div class="romaji">pen</div><div class="en">pen</div></div><div class="word-card"><span class="emoji">📖</span><div class="jp">ほん</div><div class="romaji">hon</div><div class="en">book</div></div><div class="word-card"><span class="emoji">💧</span><div class="jp">みず</div><div class="romaji">mizu</div><div class="en">water</div></div><div class="word-card"><span class="emoji">🍎</span><div class="jp">りんご</div><div class="romaji">ringo</div><div class="en">apple</div></div><div class="word-card"><span class="emoji">☕</span><div class="jp">コーヒー</div><div class="romaji">koohii</div><div class="en">coffee</div></div><div class="word-card"><span class="emoji">❓</span><div class="jp">なん／なに</div><div class="romaji">nan / nani</div><div class="en">what</div></div></div></section>
-  <section><h2>Reading Practice</h2><p class="lede">Read the 6 words above out loud, using the hiragana chart.</p></section>
-  <section>
-    <h2>Conversation Practice</h2>
-    <p class="lede">Point at an object and ask "What is this?" — swap in a different word for the answer each time.</p>
-    <div class="drill"><div class="row"><div class="who">A</div><div class="jp">これはなんですか？</div><div class="rj">Kore wa nan desu ka?</div><div class="en">What is this?</div></div><div class="row"><div class="who">B</div><div class="jp">それは<span class="blank">＿＿</span>です。</div><div class="rj">Sore wa ___ desu.</div><div class="en">That is ___.</div></div></div>
-    <div class="drill"><div class="row"><div class="who">A</div><div class="jp">それはなんですか？</div><div class="rj">Sore wa nan desu ka?</div><div class="en">What is that (near you)?</div></div><div class="row"><div class="who">B</div><div class="jp">これは<span class="blank">＿＿</span>です。</div><div class="rj">Kore wa ___ desu.</div><div class="en">This is ___.</div></div></div>
-    <div class="drill"><div class="row"><div class="who">A</div><div class="jp">あれはなんですか？</div><div class="rj">Are wa nan desu ka?</div><div class="en">What is that / it (over there)?</div></div><div class="row"><div class="who">B</div><div class="jp">あれは<span class="blank">＿＿</span>です。</div><div class="rj">Are wa ___ desu.</div><div class="en">That is ___.</div></div></div>
-  </section>
-
-  <section>
-    <h2>A Note on Articles</h2>
-    <p class="lede">Japanese has no words for "a," "an," or "the." これはペンです simply means "This is (a) pen" — no article needed, in either direction.</p>
-  </section>
-
-</main>
-<footer>Sakura Bloom Japanese Lessons — Unit 3 / Student Edition（下書き）</footer>
-</body>
-</html>
+.pointto{font-size:.72rem;margin-top:.35rem;color:var(--sakura);font-weight:700;} .kana{font-size:1.1rem;display:block;} .romaji-sm{font-size:.65rem;opacity:.7;} table td,table th{text-align:center;}
+:root{--tl:#1f3a5f;--s1:#b05f80;--s2:#9a7433;--s3:#1f3a5f;--s4:#3f7a6b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tl:#a9c1ea;--s3:#3d5f94}}
+:root[data-theme="dark"]{--tl:#a9c1ea;--s3:#3d5f94}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--indigo);padding:.55rem 1rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.topbar-in{max-width:780px;margin:0 auto}
+.back{display:inline-block;padding:.35rem 1rem;border-radius:999px;background:var(--sakura-soft);color:#16283f;text-decoration:none;font-weight:700;font-size:.85rem}
+section h2.plain{font-size:1.35rem;margin-bottom:.6rem}
+.step{display:flex;align-items:center;gap:.9rem;background:var(--sc);color:#fff;border-radius:12px;padding:.85rem 1.1rem;margin:0 0 .8rem}
+.step .n{font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;background:rgba(255,255,255,.25);padding:.2rem .85rem;border-radius:999px;white-space:nowrap}
+.step h2{color:#fff!important;font-size:1.3rem;line-height:1.3}
+.s1{--sc:var(--s1)}.s2{--sc:var(--s2)}.s3{--sc:var(--s3)}.s4{--sc:var(--s4)}
+.lede{font-size:.95rem}
+.nomem{display:inline-block;margin-left:.5rem;padding:.1rem .7rem;border-radius:999px;font-size:.72rem;font-weight:700;background:var(--sakura-soft);color:#16283f;vertical-align:middle;font-family:'Zen Kaku Gothic New',sans-serif}
+section h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--indigo);margin:1.6rem 0 .5rem}
+@media (prefers-color-scheme: dark){section h3{color:var(--sakura-soft)}}
+:root[data-theme="dark"] section h3{color:var(--sakura-soft)}
+.tonly{border-left:5px solid var(--tl);background:color-mix(in srgb,var(--tl) 12%,var(--paper-light));border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.9rem 0;font-size:.92rem;line-height:1.8}
+.tonly .lab{display:block;font-weight:700;color:var(--tl);font-size:.8rem;margin-bottom:.3rem}
+.tonly p{margin:.4rem 0}.tonly ol,.tonly ul{margin:.4rem 0;padding-left:1.3rem}
+table.plan{min-width:0}table.plan td,table.plan th{text-align:left}
+.summary{border:2px solid var(--sakura);border-radius:12px;background:var(--paper-light);padding:.4rem 1.3rem 1rem}
+.summary ul{list-style:none;padding:0;margin:.4rem 0}.summary li{padding:.35rem 0;font-size:1.02rem}.summary li:before{content:"● ";color:var(--sakura)}
+.sit{display:flex;gap:1rem;align-items:center;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin-bottom:.8rem}
+.sit .pic{flex:0 0 5.5rem;text-align:center;font-size:1.9rem;line-height:1.3}.sit .time{font-size:.78rem;font-weight:700;color:var(--gold)}
+.sit .sb{flex:1;min-width:0}.sit .sd{font-weight:700;margin-bottom:.3rem;font-size:.95rem}
+.sl{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .6rem;padding:.25rem 0;border-bottom:1px dashed var(--line)}.sl:last-child{border-bottom:0}
+.sl .w{font-size:.72rem;font-weight:700;color:var(--gold);min-width:3.8rem}.sl .j{font-size:1.1rem}.sl .r{font-size:.78rem;color:var(--gold)}.sl .e{font-size:.78rem;opacity:.75}
+.drill .row.ra,.drill .row.rb,.sl.ra,.sl.rb{border:0;border-radius:10px;padding:.5rem .8rem;margin:.4rem 0}
+.drill .row.ra,.sl.ra{background:color-mix(in srgb,var(--sakura) 18%,var(--paper-light))}
+.drill .row.rb,.sl.rb{background:color-mix(in srgb,#4a78b8 16%,var(--paper-light))}
+.drill .row.ra .who,.drill .row.rb .who,.sl.ra .w,.sl.rb .w{display:inline-block;color:#fff;font-size:.78rem;font-weight:700;padding:.05rem .65rem;border-radius:999px;margin-bottom:.25rem;min-width:0}
+.drill .row.ra .who,.sl.ra .w{background:#b05f80}.drill .row.rb .who,.sl.rb .w{background:#3d6aa5}
+.sit .pic.wide{flex:0 0 9.5rem;font-size:1.5rem}.sit .pic.wide .time{font-size:.75rem}
+.dist{margin:1rem 0;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem .6rem}
+</style></head><body>
+<div class="topbar"><div class="topbar-in"><a class="back" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></div></div>
+<header class="hero"><div class="hero-inner"><div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
+<h1>Unit 3: What is this?<br>ユニット3：なに</h1>
+<p class="sub">Goal: ask and answer "What is this?" / "What is that?" with different words.</p></div></header><main>
+<section><div class="step s1"><span class="n">STEP 1</span><h2>Learn today's words</h2></div><p class="lede">Listen to your teacher, then repeat each word out loud.</p><div class="word-grid"><div class="word-card"><div class="emoji">✏️</div><div class="jp">ペン</div><div class="romaji">pen</div><div class="en">pen</div></div><div class="word-card"><div class="emoji">📖</div><div class="jp">ほん</div><div class="romaji">hon</div><div class="en">book</div></div><div class="word-card"><div class="emoji">👓</div><div class="jp">めがね</div><div class="romaji">megane</div><div class="en">glasses</div></div><div class="word-card"><div class="emoji">🍎</div><div class="jp">りんご</div><div class="romaji">ringo</div><div class="en">apple</div></div><div class="word-card"><div class="emoji">☕</div><div class="jp">コーヒー</div><div class="romaji">koohii</div><div class="en">coffee</div></div><div class="word-card"><div class="emoji">❓</div><div class="jp">なん／なに</div><div class="romaji">nan / nani</div><div class="en">what</div></div></div></section><section><div class="step s2"><span class="n">STEP 2</span><h2>No "a" or "the" in Japanese</h2></div><p class="lede">Japanese has no words for "a," "an," or "the." これはペンです simply means "This is (a) pen" — no article needed, in either direction.</p></section><section><div class="step s3"><span class="n">STEP 3</span><h2>Reading practice</h2></div><p class="lede">Read the 6 words out loud. Use the hiragana chart for ほん・めがね・りんご・なに, and the katakana chart for ペン・コーヒー.</p></section><section><div class="step s4"><span class="n">STEP 4</span><h2>Conversation practice: what is that?</h2></div><p class="lede">First, learn three little words for pointing — the picture shows when to use each. Then ask about things you see.</p><div class="word-grid"><div class="word-card"><div class="emoji">👇</div><div class="jp">これ</div><div class="romaji">kore</div><div class="en">this (near me)</div></div><div class="word-card"><div class="emoji">👉</div><div class="jp">それ</div><div class="romaji">sore</div><div class="en">that / it (near you)</div></div><div class="word-card"><div class="emoji">☝️</div><div class="jp">あれ</div><div class="romaji">are</div><div class="en">that (over there)</div></div></div><div class="dist"><svg viewBox="0 0 680 280" role="img" aria-label="Diagram: A points to three things at different distances" style="width:100%;height:auto;max-width:680px;display:block;margin:0 auto">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--gold)"/></marker></defs>
+<line x1="10" y1="172" x2="670" y2="172" style="stroke:var(--line)" stroke-width="3"/>
+<path d="M52,118 Q85,66 127,116" fill="none" style="stroke:var(--gold)" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<path d="M56,116 Q200,14 336,116" fill="none" style="stroke:var(--gold)" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<path d="M60,114 Q340,-50 608,116" fill="none" style="stroke:var(--gold)" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<text x="22" y="166" font-size="50">🙋</text><text x="106" y="166" font-size="38">✏️</text><text x="318" y="166" font-size="38">👓</text><text x="390" y="166" font-size="50">🧑</text><text x="590" y="166" font-size="40">🍎</text>
+<text x="48" y="193" font-size="16" font-weight="700" text-anchor="middle" style="fill:#b05f80">A (you)</text><text x="416" y="193" font-size="16" font-weight="700" text-anchor="middle" style="fill:#3d6aa5">B</text>
+<rect x="65" y="198" width="124" height="66" rx="14" style="fill:color-mix(in srgb,var(--sakura) 26%,transparent);stroke:var(--sakura)" stroke-width="2" /><text x="127" y="229" font-size="28" font-weight="700" text-anchor="middle" style="fill:var(--ink)">これ</text><text x="127" y="252" font-size="13" text-anchor="middle" style="fill:var(--ink)">this (near me)</text>
+<rect x="278" y="198" width="124" height="66" rx="14" style="fill:color-mix(in srgb,#4a78b8 24%,transparent);stroke:#4a78b8" stroke-width="2" /><text x="340" y="229" font-size="28" font-weight="700" text-anchor="middle" style="fill:var(--ink)">それ</text><text x="340" y="252" font-size="13" text-anchor="middle" style="fill:var(--ink)">that / it (near you)</text>
+<rect x="550" y="198" width="124" height="66" rx="14" style="fill:none;stroke:var(--gold)" stroke-width="2" stroke-dasharray="7 6"/><text x="612" y="229" font-size="28" font-weight="700" text-anchor="middle" style="fill:var(--ink)">あれ</text><text x="612" y="252" font-size="13" text-anchor="middle" style="fill:var(--ink)">that (over there)</text>
+</svg><p class="lede" style="margin:.4rem 0 0;text-align:center">A (you) points at each thing. <b>これ</b> = near you ・ <b>それ</b> = near B ・ <b>あれ</b> = far from both</p></div><div class="note"><strong>🏠 Situation:</strong> You are visiting a friend's home. Ask about the things you see. Swap in other words from Step 1 (めがね, りんご, コーヒー…) and keep practicing.</div><div class="sit"><div class="pic wide"><div>🙋 ✏️ ・・・ 🧑</div><div class="time">near A</div></div><div class="sb"><div class="sd">The pen is near A (the person asking).</div><div class="sl ra"><span class="w">A</span><span class="j">これはなんですか？</span><span class="r">Kore wa nan desu ka?</span><span class="e">What is this?</span></div><div class="sl rb"><span class="w">B</span><span class="j">それはペンです。</span><span class="r">Sore wa pen desu.</span><span class="e">That is a pen.</span></div></div></div><div class="sit"><div class="pic wide"><div>🙋 ・・・ 📖 🧑</div><div class="time">near B</div></div><div class="sb"><div class="sd">The book is near B (the person answering).</div><div class="sl ra"><span class="w">A</span><span class="j">それはなんですか？</span><span class="r">Sore wa nan desu ka?</span><span class="e">What is that?</span></div><div class="sl rb"><span class="w">B</span><span class="j">これはほんです。</span><span class="r">Kore wa hon desu.</span><span class="e">This is a book.</span></div></div></div><div class="sit"><div class="pic wide"><div>🙋 ・・・ 🧑 ・・・ 🍎</div><div class="time">far from both</div></div><div class="sb"><div class="sd">The apple is far from both of you.</div><div class="sl ra"><span class="w">A</span><span class="j">あれはなんですか？</span><span class="r">Are wa nan desu ka?</span><span class="e">What is that over there?</span></div><div class="sl rb"><span class="w">B</span><span class="j">あれはりんごです。</span><span class="r">Are wa ringo desu.</span><span class="e">That is an apple.</span></div></div></div></section><section><div class="summary"><h2 class="plain">Unit 3 Summary（ユニット3のまとめ）</h2><ul><li>I can say the 6 words: pen, book, glasses, apple, coffee, what.</li><li>I can read today's words using the charts.</li><li>I can ask "What is this / that?"</li><li>I can answer with ～です, using これ・それ・あれ.</li></ul></div></section><p style="text-align:center"><a class="back" style="background:var(--indigo);color:#fff" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></p></main><footer>Sakura Bloom Japanese Lessons — Unit 3 / Student Edition</footer></body></html>
