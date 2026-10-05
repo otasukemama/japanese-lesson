@@ -1,11 +1,7 @@
+Unit5 student · HTML
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Unit 5: Who（生徒用） | Sakura Bloom Japanese</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Unit 5: Who is this?（生徒用） | Sakura Bloom Japanese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -60,27 +56,50 @@
   @media (prefers-color-scheme: dark){.note strong{color:var(--sakura-soft);}}
   :root[data-theme="dark"] .note strong{color:var(--sakura-soft);}
   footer{text-align:center;padding:2.2rem 1rem 3rem;color:color-mix(in srgb, var(--ink) 55%, transparent);font-size:.8rem;}
-</style>
-</head>
-<body>
-<header class="hero">
-  <div class="hero-inner">
-    <div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
-    <h1>Unit 5: Who is that?<br>ユニット5：だれ</h1>
-    <p class="sub">Goal: ask who someone is and answer with their name.</p>
-  </div>
-</header>
-<main>
-
-  <section><h2>Today's Words</h2><div class="word-grid"><div class="word-card"><span class="emoji">🧑‍🏫</span><div class="jp">せんせい</div><div class="romaji">sensei</div><div class="en">teacher</div></div><div class="word-card"><span class="emoji">🎒</span><div class="jp">がくせい</div><div class="romaji">gakusei</div><div class="en">student</div></div><div class="word-card"><span class="emoji">🧑‍🤝‍🧑</span><div class="jp">ともだち</div><div class="romaji">tomodachi</div><div class="en">friend</div></div><div class="word-card"><span class="emoji">👪</span><div class="jp">かぞく</div><div class="romaji">kazoku</div><div class="en">family</div></div><div class="word-card"><span class="emoji">🙋</span><div class="jp">あのひと</div><div class="romaji">ano hito</div><div class="en">that person</div></div><div class="word-card"><span class="emoji">❓</span><div class="jp">だれ</div><div class="romaji">dare</div><div class="en">who</div></div></div></section>
-  <section><h2>Reading Practice</h2><p class="lede">Read the 6 words above out loud, using the hiragana chart.</p></section>
-  <section>
-    <h2>Conversation Practice</h2>
-    <p class="lede">Ask who someone is, then answer with a name. Try it with people you know.</p>
-    <div class="drill"><div class="row"><div class="who">A</div><div class="jp">あの人はだれですか？</div><div class="rj">Ano hito wa dare desu ka?</div><div class="en">Who is that person?</div></div><div class="row"><div class="who">B</div><div class="jp"><span class="blank">＿＿</span>さんです。</div><div class="rj">___ san desu.</div><div class="en">That's ___.</div></div></div>
-  </section>
-
-</main>
-<footer>Sakura Bloom Japanese Lessons — Unit 5 / Student Edition（下書き）</footer>
-</body>
-</html>
+.pointto{font-size:.72rem;margin-top:.35rem;color:var(--sakura);font-weight:700;} .kana{font-size:1.1rem;display:block;} .romaji-sm{font-size:.65rem;opacity:.7;} table td,table th{text-align:center;}
+:root{--tl:#1f3a5f;--s1:#b05f80;--s2:#9a7433;--s3:#1f3a5f;--s4:#3f7a6b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tl:#a9c1ea;--s3:#3d5f94}}
+:root[data-theme="dark"]{--tl:#a9c1ea;--s3:#3d5f94}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--indigo);padding:.55rem 1rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.topbar-in{max-width:780px;margin:0 auto}
+.back{display:inline-block;padding:.35rem 1rem;border-radius:999px;background:var(--sakura-soft);color:#16283f;text-decoration:none;font-weight:700;font-size:.85rem}
+section h2.plain{font-size:1.35rem;margin-bottom:.6rem}
+.step{display:flex;align-items:center;gap:.9rem;background:var(--sc);color:#fff;border-radius:12px;padding:.85rem 1.1rem;margin:0 0 .8rem}
+.step .n{font-family:'Shippori Mincho',serif;font-size:1.15rem;font-weight:700;background:rgba(255,255,255,.25);padding:.2rem .85rem;border-radius:999px;white-space:nowrap}
+.step h2{color:#fff!important;font-size:1.3rem;line-height:1.3}
+.s1{--sc:var(--s1)}.s2{--sc:var(--s2)}.s3{--sc:var(--s3)}.s4{--sc:var(--s4)}
+.lede{font-size:.95rem}
+.nomem{display:inline-block;margin-left:.5rem;padding:.1rem .7rem;border-radius:999px;font-size:.72rem;font-weight:700;background:var(--sakura-soft);color:#16283f;vertical-align:middle;font-family:'Zen Kaku Gothic New',sans-serif}
+section h3{font-family:'Shippori Mincho',serif;font-size:1.1rem;color:var(--indigo);margin:1.6rem 0 .5rem}
+@media (prefers-color-scheme: dark){section h3{color:var(--sakura-soft)}}
+:root[data-theme="dark"] section h3{color:var(--sakura-soft)}
+.tonly{border-left:5px solid var(--tl);background:color-mix(in srgb,var(--tl) 12%,var(--paper-light));border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:.9rem 0;font-size:.92rem;line-height:1.8}
+.tonly .lab{display:block;font-weight:700;color:var(--tl);font-size:.8rem;margin-bottom:.3rem}
+.tonly p{margin:.4rem 0}.tonly ol,.tonly ul{margin:.4rem 0;padding-left:1.3rem}
+table.plan{min-width:0}table.plan td,table.plan th{text-align:left}
+.summary{border:2px solid var(--sakura);border-radius:12px;background:var(--paper-light);padding:.4rem 1.3rem 1rem}
+.summary ul{list-style:none;padding:0;margin:.4rem 0}.summary li{padding:.35rem 0;font-size:1.02rem}.summary li:before{content:"● ";color:var(--sakura)}
+.sit{display:flex;gap:1rem;align-items:center;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin-bottom:.8rem}
+.sit .pic{flex:0 0 5.5rem;text-align:center;font-size:1.9rem;line-height:1.3}.sit .time{font-size:.78rem;font-weight:700;color:var(--gold)}
+.sit .sb{flex:1;min-width:0}.sit .sd{font-weight:700;margin-bottom:.3rem;font-size:.95rem}
+.sl{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .6rem;padding:.25rem 0;border-bottom:1px dashed var(--line)}.sl:last-child{border-bottom:0}
+.sl .w{font-size:.72rem;font-weight:700;color:var(--gold);min-width:3.8rem}.sl .j{font-size:1.1rem}.sl .r{font-size:.78rem;color:var(--gold)}.sl .e{font-size:.78rem;opacity:.75}
+.drill .row.ra,.drill .row.rb,.sl.ra,.sl.rb{border:0;border-radius:10px;padding:.5rem .8rem;margin:.4rem 0}
+.drill .row.ra,.sl.ra{background:color-mix(in srgb,var(--sakura) 18%,var(--paper-light))}
+.drill .row.rb,.sl.rb{background:color-mix(in srgb,#4a78b8 16%,var(--paper-light))}
+.drill .row.ra .who,.drill .row.rb .who,.sl.ra .w,.sl.rb .w{display:inline-block;color:#fff;font-size:.78rem;font-weight:700;padding:.05rem .65rem;border-radius:999px;margin-bottom:.25rem;min-width:0}
+.drill .row.ra .who,.sl.ra .w{background:#b05f80}.drill .row.rb .who,.sl.rb .w{background:#3d6aa5}
+.sit .pic.wide{flex:0 0 9.5rem;font-size:1.5rem}.sit .pic.wide .time{font-size:.75rem}
+.dist{margin:1rem 0;background:var(--paper-light);border:1px solid var(--line);border-radius:12px;padding:.8rem .6rem}
+.phone{max-width:540px;margin:1rem auto;background:#2b2b33;border-radius:26px;padding:12px 12px 16px}.phone .top{color:#fff;text-align:center;font-size:.8rem;margin-bottom:8px;font-weight:700}
+.phone .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.photo{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ffe3ec,#dfe9ff)}
+.photo:nth-child(2){background:linear-gradient(135deg,#fff1cc,#e1f3e7)}.photo:nth-child(3){background:linear-gradient(135deg,#e8e1ff,#ffe3d6)}
+.photo .em{font-size:3.2rem}.photo .no{position:absolute;top:6px;left:8px;background:#fff;color:#333;border-radius:999px;font-size:.7rem;font-weight:700;padding:0 .55rem}
+.photo .cap{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.5);color:#fff;font-size:.78rem;text-align:center;padding:.15rem}
+.photo .cap small{display:block;font-size:.62rem;opacity:.85;font-weight:400}
+</style></head><body>
+<div class="topbar"><div class="topbar-in"><a class="back" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></div></div>
+<header class="hero"><div class="hero-inner"><div class="brand">SAKURA BLOOM JAPANESE LESSONS<span class="draft-tag" style="background:var(--sakura);color:#16283f;">STUDENT</span></div>
+<h1>Unit 5: Who is this?<br>ユニット5：だれ</h1>
+<p class="sub">Goal: ask who someone is, and answer with "my friend / my teacher / my family" and their name.</p></div></header><main>
+<section><div class="step s1"><span class="n">STEP 1</span><h2>Learn today's words</h2></div><p class="lede">Listen to your teacher, then repeat each word out loud.</p><div class="word-grid"><div class="word-card"><div class="emoji">🧑‍🏫</div><div class="jp">せんせい</div><div class="romaji">sensei</div><div class="en">teacher</div></div><div class="word-card"><div class="emoji">🎒</div><div class="jp">がくせい</div><div class="romaji">gakusei</div><div class="en">student</div></div><div class="word-card"><div class="emoji">🧑‍🤝‍🧑</div><div class="jp">ともだち</div><div class="romaji">tomodachi</div><div class="en">friend</div></div><div class="word-card"><div class="emoji">👪</div><div class="jp">かぞく</div><div class="romaji">kazoku</div><div class="en">family</div></div><div class="word-card"><div class="emoji">👩</div><div class="jp">おかあさん</div><div class="romaji">okaasan</div><div class="en">mother</div></div><div class="word-card"><div class="emoji">🧑</div><div class="jp">このひと</div><div class="romaji">kono hito</div><div class="en">this person</div></div><div class="word-card"><div class="emoji">❓</div><div class="jp">だれ</div><div class="romaji">dare</div><div class="en">who</div></div><div class="word-card"><div class="emoji">🙋</div><div class="jp">わたしの</div><div class="romaji">watashi no</div><div class="en">my</div></div></div></section><section><div class="step s2"><span class="n">STEP 2</span><h2>Reading practice</h2></div><p class="lede">Read the 8 words out loud, using the hiragana chart.</p></section><section><div class="step s3"><span class="n">STEP 3</span><h2>Conversation practice: who is that?</h2></div><p class="lede">Look at photos and ask who is in them. Answer with <b>わたしの</b> (my) + a word + the name.</p><div class="note"><strong>💡 わたしの = my.</strong> わたし (I) + の = わたしの (my). So <b>わたしの ともだち</b> = "my friend," <b>わたしの せんせい</b> = "my teacher."</div><div class="phone"><div class="top">📱 Photos</div><div class="pg"><div class="photo"><span class="no">Photo 1</span><span class="em">🧑</span><span class="cap">たなかさん<small>Tanaka-san</small></span></div><div class="photo"><span class="no">Photo 2</span><span class="em">🧑‍🏫</span><span class="cap">さとうせんせい<small>Satou-sensei</small></span></div><div class="photo"><span class="no">Photo 3</span><span class="em">👩</span><span class="cap">おかあさん<small>okaasan</small></span></div></div></div><div class="note"><strong>📱 Situation:</strong> You are looking at photos on your phone with a friend. If you have photos of your own, use them too — with real names!</div><div class="sit"><div class="pic wide"><div>📱 🧑‍🤝‍🧑</div><div class="time">a friend</div></div><div class="sb"><div class="sd">Look at Photo 1. You point at your friend.</div><div class="sl ra"><span class="w">A</span><span class="j">このひとはだれですか？</span><span class="r">Kono hito wa dare desu ka?</span><span class="e">Who is this person?</span></div><div class="sl rb"><span class="w">B</span><span class="j">わたしのともだちです。たなかさんです。</span><span class="r">Watashi no tomodachi desu. Tanaka-san desu.</span><span class="e">That's my friend. It's Tanaka.</span></div></div></div><div class="sit"><div class="pic wide"><div>📱 🧑‍🏫</div><div class="time">your teacher</div></div><div class="sb"><div class="sd">Look at Photo 2. You point at your teacher.</div><div class="sl ra"><span class="w">A</span><span class="j">このひとはだれですか？</span><span class="r">Kono hito wa dare desu ka?</span><span class="e">Who is this person?</span></div><div class="sl rb"><span class="w">B</span><span class="j">わたしのせんせいです。さとうせんせいです。</span><span class="r">Watashi no sensei desu. Satou-sensei desu.</span><span class="e">That's my teacher. It's Satou-sensei.</span></div></div></div><div class="sit"><div class="pic wide"><div>📱 👩</div><div class="time">your mother</div></div><div class="sb"><div class="sd">Look at Photo 3. You point at your mother.</div><div class="sl ra"><span class="w">A</span><span class="j">このひとはだれですか？</span><span class="r">Kono hito wa dare desu ka?</span><span class="e">Who is this person?</span></div><div class="sl rb"><span class="w">B</span><span class="j">わたしのおかあさんです。</span><span class="r">Watashi no okaasan desu.</span><span class="e">That's my mother.</span></div></div></div></section><section><div class="summary"><h2 class="plain">Unit 5 Summary（ユニット5のまとめ）</h2><ul><li>I can say the 8 words: teacher, student, friend, family, mother, this person, who, my.</li><li>I can read today's words using the hiragana chart.</li><li>I can ask "Who is this person?"</li><li>I can answer with わたしの＋a word, and the name.</li></ul></div></section><p style="text-align:center"><a class="back" style="background:var(--indigo);color:#fff" href="https://otasukemama.github.io/japanese-lesson/">← Contents ／ 目次に戻る</a></p></main><footer>Sakura Bloom Japanese Lessons — Unit 5 / Student Edition</footer></body></html>
